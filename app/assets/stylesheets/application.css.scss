@@ -16,3 +16,10 @@
 @import "bourbon";
 @import "base/base";
 @import "neat";
+
+@import "shared/nav_menu";
+@import "cards";
+
+.outer-container {
+  @include outer-container;
+}
