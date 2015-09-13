@@ -1,0 +1,28 @@
+%p#notice= notice
+.card-wrapper
+  .cards
+    .card.primary-card
+      .card-image
+        = image_tag @first_post.primary_image
+        -# = image_tag "sheba-yemeni-food-logo.png", class: "logo"
+      .card-header
+        = @first_post.title
+      .card-copy
+        %p= raw @first_post.content
+        = @first_post.date
+        = link_to 'Show', @first_post
+        = link_to 'Edit', edit_post_path(@first_post)
+  .cards
+    - @posts[1..6].each do |post|
+      = link_to post do
+        .card.small-card
+          .card-image
+            = image_tag post.primary_image
+          .card-header
+            = post.title
+          .card-copy
+            %p= raw post.content.truncate(100, separator: " ") if post.content
+            = post.date
+            = link_to 'Show', post
+            = link_to 'Edit', edit_post_path(post)
+= link_to 'New Post', new_post_path

@@ -1,0 +1,29 @@
+%header.navigation{:role => "banner"}
+  .navigation-wrapper
+    %a.logo{:href => "javascript:void(0)"}
+      %img{:alt => "Logo Image", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png"}/
+    %a#js-mobile-menu.navigation-menu-button{:href => "javascript:void(0)"} MENU
+    %nav{:role => "navigation"}
+      %ul#js-navigation-menu.navigation-menu.show
+        %li.nav-link
+          %a{:href => "javascript:void(0)"} Recipes
+        %li.nav-link
+          %a{:href => "javascript:void(0)"} About
+        %li.nav-link
+          %a{:href => "javascript:void(0)"} Shop
+        %li.nav-link
+          %a{:href => "javascript:void(0)"} Contact
+:javascript
+  $(document).ready(function() {
+    var menuToggle = $('#js-mobile-menu').unbind();
+    $('#js-navigation-menu').removeClass("show");
+
+    menuToggle.on('click', function(e) {
+      e.preventDefault();
+      $('#js-navigation-menu').slideToggle(function(){
+        if($('#js-navigation-menu').is(':hidden')) {
+          $('#js-navigation-menu').removeAttr('style');
+        }
+      });
+    });
+  });

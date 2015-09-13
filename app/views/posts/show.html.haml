@@ -1,0 +1,42 @@
+.post-image-wrapper-1
+  = image_tag @post.primary_image
+  .social-buttons-overlay-1
+    %a{"data-pin-color" => "white", "data-pin-config" => "beside", "data-pin-do" => "buttonPin", "data-pin-height" => "28", :href => "//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest"}
+      %img{:src => "//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_28.png"}/
+%iframe#video{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/hEfC4ICNfqo"}
+.image-info
+  %h1= @post.title
+  = @post.date
+.inner-container
+  %p#notice= notice
+  %p
+    %strong Title:
+  %p
+    %strong Content:
+    = @post.content
+  %p
+    %strong Published:
+  %p
+    %strong External link:
+    = @post.external_link
+  %p
+    %strong Style:
+    = @post.style
+  = link_to 'Edit', edit_post_path(@post)
+  |
+  \#{link_to 'Back', posts_path}
+
+- @post.comments.parent_comments.each do |comment|
+  = render comment
+  %div{style: "margin-left: 60px;"}= render comment.children
+
+:javascript
+  $(function(){
+    $('#video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+
+    $(window).resize(function(){
+      $('#video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+    });
+  });
+
+%script{:async => "", :defer => "defer", :src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}

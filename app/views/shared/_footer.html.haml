@@ -1,0 +1,48 @@
+.pre-footer-div
+.footer-div
+.second-footer-div
+.post-footer-div
+
+%footer.footer{:role => "contentinfo"}
+  .footer-logo
+    %img{:alt => "Logo image", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png"}/
+  .footer-links
+    %ul
+      %li
+        %h3 Content
+      %li
+        %a{:href => "javascript:void(0)"} About
+      %li
+        %a{:href => "javascript:void(0)"} Contact
+      %li
+        %a{:href => "javascript:void(0)"} Products
+    %ul
+      %li
+        %h3 About
+      %li
+        %a{:href => "#"}
+          Lorem ipsum dolor sit amet, tempus commodo vel, elementum commodo tortor, in pellentesque lectus pulvinar non. Nam elementum nisi ut justo sollicitudin hendrerit. Quisque fermentum rutrum velit at sodales.
+    %ul
+      %li
+        %h3 Subscribe
+      %li
+        .g-ytsubscribe{"data-channel" => "shebayemenifood", "data-count" => "default", "data-layout" => "default", "data-theme" => "dark"}
+      %li
+        .fb-like{"data-action" => "like", "data-href" => "https://www.facebook.com/ShebaYemeniFood", "data-layout" => "button_count", "data-share" => "false", "data-show-faces" => "true", "data-width" => "300"}
+      %li
+        %a{"data-pin-do" => "buttonFollow", :href => "http://www.pinterest.com/shebayemenifood/"} Pinterest
+  %hr/
+  %p
+    All images and content &copy; #{Date.today.year} Katherine Abu Hadal.
+
+%script{:src => "https://apis.google.com/js/platform.js"}
+#fb-root
+:javascript
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=1459144461020057";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+%script{:async => "", :defer => "defer", :src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}

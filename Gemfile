@@ -13,6 +13,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'unicorn', '~> 4.9.0'
+gem 'safe_attributes'
+gem 'pry'
+
+gem 'haml'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -25,6 +30,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bourbon'
 gem 'neat'
+
+gem "paperclip", "~> 4.3"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
