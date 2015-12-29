@@ -8,8 +8,19 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
+Gemfile.lock
+config/application.yml
 /log/*
 !/log/.keep
+db/*.sql
 /tmp
 /docroot/*
 /public/images/*
+.rspec
+
+/coverage/
+/capybara*
+/capybara-*.html
+/gems
+/specifications
+rerun.txt
