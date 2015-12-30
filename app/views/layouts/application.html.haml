@@ -5,6 +5,9 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+
+  %script{:async => "", :defer => "defer", :src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}
+
   %body
     = render 'shared/nav_menu'
     .outer-container
