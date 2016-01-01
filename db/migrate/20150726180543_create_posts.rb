@@ -1,12 +1,10 @@
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
-      t.string :title
+      t.string :title, null: false
       t.text :content
-      t.datetime :published_at
+      t.text :ingredients
       t.boolean :published
-      t.string :external_link
-      t.string :style
       t.string :permalink
 
       t.timestamps null: false
