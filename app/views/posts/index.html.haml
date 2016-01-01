@@ -1,18 +1,10 @@
-%p#notice= notice
 .card-wrapper
-  .cards
-    .card.primary-card
-      .card-image
-        = image_tag posts.first.primary_image
-        -# = image_tag "sheba-yemeni-food-logo.png", class: "logo"
-      .card-header
-        = posts.first.title
-      .card-copy
-        %p= raw posts.first.content
-        = posts.first.date
-        = link_to 'Show', posts.first
-        = link_to 'Edit', [:edit, posts.first]
-  .cards
+  .cards.primary-cards
+    .logo-wrapper
+      = image_tag "sheba-yemeni-food-logo.png"
+    = render "post", post: posts.first
+
+  .cards.small-cards
     = render posts
     = will_paginate posts
-= link_to 'New Post', [:new, :post]
+

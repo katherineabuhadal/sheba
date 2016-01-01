@@ -8,25 +8,34 @@
   @include span-columns(12);
 }
 
-.primary-card {
-  @include flex-basis(60em);
-  .logo {
-    width: 50px;
+.logo-wrapper {
+  @include flex-basis(2em);
+  @include flex-grow(1);
+  @include transition (all 0.2s ease-in-out);
+  position: relative;
+}
+
+.primary-cards {
+  .card {
+    @include flex-basis(22.5em);
+
+    .card-image {
+      max-height: 350px;
+    }
   }
 }
 
-.small-card {
-  @include flex-basis(20em);
+.small-cards {
+  .card {
+    @include flex-basis(20em);
 
-  .card-image {
-    height: 185px;
-    max-height: 185px;
+    .card-image {
+      max-height: 185px;
+    }
   }
 }
 
 .card {
-  $base-spacing: 1.5em !default;
-  $base-font-color: $dark-gray !default;
   $card-border-color: $base-border-color;
   $card-border: 1px solid $card-border-color;
   $card-background: lighten($card-border-color, 10%);
@@ -46,7 +55,7 @@
   position: relative;
 
   a {
-      color: $base-font-color;
+    color: $base-font-color;
     &:hover {
       color: $base-font-color;
     }

@@ -6,13 +6,15 @@
     %nav{:role => "navigation"}
       %ul#js-navigation-menu.navigation-menu.show
         %li.nav-link
-          %a{:href => "javascript:void(0)"} Recipes
+          = link_to 'Home', root_path
         %li.nav-link
           %a{:href => "javascript:void(0)"} About
         %li.nav-link
           %a{:href => "javascript:void(0)"} Shop
         %li.nav-link
           %a{:href => "javascript:void(0)"} Contact
+        %li.nav-link
+          = link_to 'New Post', [:new, :post]
 :javascript
   $(document).ready(function() {
     var menuToggle = $('#js-mobile-menu').unbind();
