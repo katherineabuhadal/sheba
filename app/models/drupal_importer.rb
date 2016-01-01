@@ -85,6 +85,7 @@ class DrupalImporter
       content: (comment_subject(comment).comment_body_value if comment_subject(comment)),
       title: comment.subject,
       name: comment.name,
+      created_at: Time.at(comment.created).to_datetime,
       parent_id: (parent_comment.id if comment.pid != 0),
     )
   end
