@@ -3,10 +3,10 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_one :video_link
 
+  scope :ordered,   -> { order(created_at: :desc) }
+  scope :published, -> { where(published: true) }
+
   class << self
-    def random_six
-      limit(7).order("RAND()")
-    end
   end
 
   def primary_image

@@ -38,7 +38,7 @@ class PostsController < ApplicationController
   helper_method :post
 
   def posts
-    @_posts ||= Post.random_six
+    @_posts ||= Post.published.ordered.paginate(page: params[:page], per_page: 12)
   end
   helper_method :posts
 

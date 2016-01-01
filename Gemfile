@@ -19,6 +19,7 @@ gem "paperclip", "~> 4.3"
 gem "exception_notification", "~> 4.0.1"
 gem 'responders', '~> 2.0'
 gem 'font-awesome-sass'
+gem 'will_paginate', '~> 3.0.6'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.1'

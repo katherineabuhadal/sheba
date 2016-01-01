@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title, null: false
       t.text :content
       t.text :ingredients
-      t.boolean :published
+      t.boolean :published, null: false, default: false
       t.string :permalink
 
       t.timestamps null: false

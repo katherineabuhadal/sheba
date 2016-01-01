@@ -1,0 +1,11 @@
+= link_to post do
+  .card.small-card
+    .card-image
+      = image_tag post.primary_image
+    .card-header
+      = post.title
+    .card-copy
+      %p= raw post.content.truncate(100, separator: " ") if post.content
+      = post.date
+      = link_to 'Show', post
+      = link_to 'Edit', [:edit, post]

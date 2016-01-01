@@ -13,16 +13,6 @@
         = link_to 'Show', posts.first
         = link_to 'Edit', [:edit, posts.first]
   .cards
-    - posts[1..6].each do |post|
-      = link_to post do
-        .card.small-card
-          .card-image
-            = image_tag post.primary_image
-          .card-header
-            = post.title
-          .card-copy
-            %p= raw post.content.truncate(100, separator: " ") if post.content
-            = post.date
-            = link_to 'Show', post
-            = link_to 'Edit', [:edit, post]
+    = render posts
+    = will_paginate posts
 = link_to 'New Post', [:new, :post]
