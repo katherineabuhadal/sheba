@@ -8,11 +8,9 @@
         %li.nav-link
           = link_to 'Home', root_path
         %li.nav-link
-          %a{:href => "javascript:void(0)"} About
+          = link_to 'About', page_path('about')
         %li.nav-link
-          %a{:href => "javascript:void(0)"} Shop
-        %li.nav-link
-          %a{:href => "javascript:void(0)"} Contact
+          = link_to 'Contact', page_path('contact')
         %li.nav-link
           = link_to 'New Post', [:new, :post]
 :javascript
