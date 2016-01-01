@@ -46,6 +46,11 @@ namespace :import do
         self.table_name = "file_managed"
         self.inheritance_column = nil
       end
+      class Video < ActiveRecord::Base
+        establish_connection 'sheba_drupal_dump'
+        self.table_name = "field_data_field_video"
+      end
+
     end
 
     Drupal::Node.where(type: "recipe_material").find_each do |node|

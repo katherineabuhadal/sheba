@@ -24,6 +24,7 @@ class DrupalImporter
       picture.save
     end
     find_comments
+    create_video
   end
 
   private
@@ -84,6 +85,7 @@ class DrupalImporter
       content: (comment_subject(comment).comment_body_value if comment_subject(comment)),
       title: comment.subject,
       name: comment.name,
+      created_at: Time.at(comment.created).to_datetime,
       parent_id: (parent_comment.id if comment.pid != 0),
     )
   end
@@ -97,6 +99,15 @@ class DrupalImporter
         create_comment(child, new_parent_comment)
       end
     end
+  end
+
+  def video
+    Drupal::Video.where(entity_id: @node.id).first
+  end
+
+  def create_video
+    return unless video
+    VideoLink.create(english_link: video.field_video_value, post: @post)
   end
 
 end
