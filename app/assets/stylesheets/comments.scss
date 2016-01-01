@@ -1,7 +1,7 @@
 .comment {
   $comment-gutter: 1.4em;
-  $comment-image-padding: 0.7em;
-  $comment-image-width: 4em;
+  $comment-image-padding: 0.3em;
+  // $comment-image-width: 5em;
   $comment-color: $base-font-color;
   $comment-background: lighten($action-color, 15%);
   $comment-detail-color: transparentize($comment-color, 0.5);
@@ -22,14 +22,15 @@
   .comment-image {
     padding-right: $comment-gutter;
 
-    > img {
+    > i {
       background: $comment-background;
+      color: white;
       border-radius: $base-border-radius;
       display: block;
-      height: auto;
+      font-size: 3em;
       max-width: none;
       padding: $comment-image-padding;
-      width: $comment-image-width;
+      // width: $comment-image-width;
     }
 
     .comment-reverse-order & {
