@@ -18,14 +18,14 @@ ActiveRecord::Schema.define(version: 20151229184525) do
     t.integer  "post_id",    limit: 4
     t.text     "content",    limit: 65535
     t.integer  "parent_id",  limit: 4
-    t.string   "title",      limit: 255
-    t.string   "name",       limit: 255
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.string   "name",       limit: 255
+    t.string   "title",      limit: 255
   end
 
   create_table "pictures", force: :cascade do |t|
-    t.string   "name",               limit: 255
+    t.string   "name",               limit: 255, null: false
     t.integer  "post_id",            limit: 4
     t.string   "image_file_name",    limit: 255
     t.string   "image_content_type", limit: 255
@@ -34,13 +34,16 @@ ActiveRecord::Schema.define(version: 20151229184525) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title",       limit: 255,   null: false
-    t.text     "content",     limit: 65535
-    t.text     "ingredients", limit: 65535
+    t.string   "title",         limit: 255
+    t.text     "content",       limit: 65535
+    t.datetime "published_at"
     t.boolean  "published"
-    t.string   "permalink",   limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "external_link", limit: 255
+    t.string   "style",         limit: 255
+    t.string   "permalink",     limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.text     "ingredients",   limit: 65535
   end
 
   create_table "video_links", force: :cascade do |t|

@@ -1,43 +1,22 @@
-.post-image-wrapper-1
-  = image_tag @post.primary_image
-  .social-buttons-overlay-1
-    = pinterest_link(options = { media: request.protocol + request.host_with_port + @post.primary_image.url,
-      description: @post.title })
+.post-image-wrapper
+  = image_tag post.primary_image
+  .social-buttons-overlay
+    = pinterest_link(options = { media: request.protocol + request.host_with_port + post.primary_image.url,
+      description: post.title })
 
 .image-info
-  %h1= @post.title
-  = @post.date
+  %h1= post.title
+  %span
+    = post.date
+    |
+    = link_to 'Edit', edit_post_path(post)
 .inner-container
-  %p#notice= notice
-  %p
-    %strong Title:
-  %p
-    %strong Content:
-    = @post.content
-  %p
-    %strong Published:
-  %p
-    %strong External link:
-    = @post.external_link
-  %p
-    %strong Style:
-    = @post.style
+  %p= post.content
 
-  = raw @post.video_link.english_link if @post.video_link.english_link
+  = raw post.video_link.english_link if post.video_link
 
-  = link_to 'Edit', edit_post_path(@post)
-  |
-  \#{link_to 'Back', posts_path}
-
-- @post.comments.parent_comments.each do |comment|
+%h2 Comments
+- post.comments.parent_comments.each do |comment|
   = render comment
-  %div{style: "margin-left: 60px;"}= render comment.children
+  %div{class: "child-comment"}= render comment.children
 
-:javascript
-  $(function(){
-    $('#video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
-
-    $(window).resize(function(){
-      $('#video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
-    });
-  });

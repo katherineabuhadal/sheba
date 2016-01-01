@@ -1,37 +1,20 @@
-= form_for @post, html: { class: 'form-horizontal', multipart: true }  do |f|
-  - if @post.errors.any?
+= form_for post, html: { class: 'form-horizontal', multipart: true }  do |f|
+  - if post.errors.any?
     #error_explanation
-      %h2
-        = pluralize(@post.errors.count, "error")
-        prohibited this post from being saved:
       %ul
-        - @post.errors.full_messages.each do |message|
+        - post.errors.full_messages.each do |message|
           %li= message
   .field
     = f.label :title
-    %br/
     = f.text_field :title
   .field
     = f.label :content
-    %br/
     = f.text_area :content
-  .field
-    = f.label :published_at
-    %br/
-    = f.datetime_select :published_at
   .field
     = file_field_tag "images[]", type: :file, multiple: true
   .field
-    = f.label :external_link
-    %br/
-    = f.text_field :external_link
-  .field
-    = f.label :style
-    %br/
-    = f.text_field :style
-  .field
     = f.label :permalink
-    %br/
     = f.text_field :permalink
   .actions
     = f.submit
+
