@@ -13,42 +13,45 @@
 
 ActiveRecord::Schema.define(version: 20151229184525) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4
-    t.integer  "post_id",    limit: 4,     null: false
-    t.text     "content",    limit: 65535, null: false
-    t.integer  "parent_id",  limit: 4
-    t.string   "title",      limit: 255
-    t.string   "name",       limit: 255,   null: false
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.integer  "user_id"
+    t.integer  "post_id",    null: false
+    t.text     "content",    null: false
+    t.integer  "parent_id"
+    t.string   "title"
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pictures", force: :cascade do |t|
-    t.string   "name",               limit: 255
-    t.integer  "post_id",            limit: 4
-    t.string   "image_file_name",    limit: 255
-    t.string   "image_content_type", limit: 255
-    t.integer  "image_file_size",    limit: 4
+    t.string   "name"
+    t.integer  "post_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title",       limit: 255,                   null: false
-    t.text     "content",     limit: 65535
-    t.text     "ingredients", limit: 65535
-    t.boolean  "published",                 default: false, null: false
-    t.string   "permalink",   limit: 255
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
+    t.string   "title",                       null: false
+    t.text     "content"
+    t.text     "ingredients"
+    t.boolean  "published",   default: false, null: false
+    t.string   "permalink"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "video_links", force: :cascade do |t|
-    t.integer  "post_id",      limit: 4,     null: false
-    t.text     "english_link", limit: 65535
-    t.text     "arabic_link",  limit: 65535
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.integer  "post_id",      null: false
+    t.text     "english_link"
+    t.text     "arabic_link"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

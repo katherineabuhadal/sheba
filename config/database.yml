@@ -10,19 +10,23 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
 default: &default
-  adapter: mysql2
-  encoding: utf8
+  adapter: postgresql
+  encoding: unicode
   pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  # username: katherineabuhadal
+  # password:
 
 development:
   <<: *default
   database: sheba_development
 
 sheba_drupal_dump:
-  <<: *default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock
   database: sheba_drupal_dump
 
 # Warning: The database defined as "test" will be erased and
@@ -51,8 +55,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: sheba_production
-  username: sheba
-  password: <%= ENV['SHEBA_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: sheba_production
+#   username: sheba
+#   password: <%= ENV['SHEBA_DATABASE_PASSWORD'] %>

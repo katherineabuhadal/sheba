@@ -132,6 +132,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pg (0.18.2)
     power_assert (0.2.6)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -270,6 +271,7 @@ DEPENDENCIES
   mysql2
   neat
   paperclip (~> 4.3)
+  pg
   pry
   rails (= 4.2.3)
   responders (~> 2.0)
