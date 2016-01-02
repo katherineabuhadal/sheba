@@ -1,0 +1,23 @@
+.post-image-wrapper
+  = image_tag recipe.primary_image
+  .social-buttons-overlay
+    = pinterest_link(options = { media: request.protocol + request.host_with_port + recipe.primary_image.url,
+      description: recipe.title })
+
+.image-info
+  %h1= recipe.title
+  %span
+    = recipe.date
+    |
+    = link_to 'Edit', [:edit, recipe]
+.inner-container
+  %p= recipe.content
+  = raw recipe.video_link.english_link if recipe.video_link
+  = render "ads/text"
+
+%h2 Comments
+= render "comments/form", recipe: recipe
+- recipe.comments.parent_comments.each do |comment|
+  = render comment
+  %div{class: "child-comment"}= render comment.children
+

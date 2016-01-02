@@ -6,7 +6,7 @@ namespace :import do
     ActiveRecord::Base.connection.execute("TRUNCATE #{Post.quoted_table_name}")
     ActiveRecord::Base.connection.execute("TRUNCATE #{Comment.quoted_table_name}")
   end
-  desc "Import posts from drupal db"
+  desc "Import recipes from drupal db"
   task :posts => :environment do
     module Drupal
       extend ActiveSupport::Concern

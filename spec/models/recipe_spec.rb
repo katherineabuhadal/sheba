@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Post do
+describe Recipe do
 
   # Associations
   it { should have_many :pictures }

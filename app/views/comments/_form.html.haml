@@ -1,5 +1,5 @@
 .breathe
-  = form_for([post, comment]) do |f|
+  = form_for([recipe, comment]) do |f|
     = render "error_messages", target: comment
     .field
       = f.text_field :name, placeholder: "Name"

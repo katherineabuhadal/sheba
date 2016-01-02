@@ -1,4 +1,4 @@
-class Post < ActiveRecord::Base
+class Recipe < ActiveRecord::Base
   has_many :pictures, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_one :video_link

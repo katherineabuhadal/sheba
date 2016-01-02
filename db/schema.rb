@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229184525) do
+ActiveRecord::Schema.define(version: 20160102232856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "post_id",    null: false
+    t.integer  "recipe_id",  null: false
     t.text     "content",    null: false
     t.integer  "parent_id"
     t.string   "title"
@@ -29,14 +29,14 @@ ActiveRecord::Schema.define(version: 20151229184525) do
 
   create_table "pictures", force: :cascade do |t|
     t.string   "name"
-    t.integer  "post_id"
+    t.integer  "recipe_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
 
-  create_table "posts", force: :cascade do |t|
+  create_table "recipes", force: :cascade do |t|
     t.string   "title",                       null: false
     t.text     "content"
     t.text     "ingredients"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20151229184525) do
   end
 
   create_table "video_links", force: :cascade do |t|
-    t.integer  "post_id",      null: false
+    t.integer  "recipe_id",    null: false
     t.text     "english_link"
     t.text     "arabic_link"
     t.datetime "created_at",   null: false

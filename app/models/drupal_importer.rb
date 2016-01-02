@@ -6,11 +6,11 @@ class DrupalImporter
   end
 
   def run
-    @node = initialize_post
+    @node = initialize_recipe
   end
 
-  def initialize_post
-    @post = Post.create(
+  def initialize_recipe
+    @recipe = Recipe.create(
       title: title,
       content: content,
       created_at: created_at,
@@ -21,7 +21,7 @@ class DrupalImporter
     )
 
     if image_path
-      picture = @post.pictures.create(name: "xyz")
+      picture = @recipe.pictures.create(name: "xyz")
       picture.image = File.new(image_path)
       picture.save
     end
@@ -88,7 +88,7 @@ class DrupalImporter
 
   def create_comment(comment, parent_comment = nil)
     Comment.create(
-      post_id: @post.id,
+      recipe_id: @recipe.id,
       content: (comment_subject(comment).comment_body_value if comment_subject(comment)),
       title: comment.subject,
       name: comment.name,
@@ -114,7 +114,7 @@ class DrupalImporter
 
   def create_video
     return unless video
-    VideoLink.create(english_link: video.field_video_value, post: @post)
+    VideoLink.create(english_link: video.field_video_value, recipe: @recipe)
   end
 
 end

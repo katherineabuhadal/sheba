@@ -1,0 +1,15 @@
+.card-wrapper
+  .cards.primary-cards
+    .logo-wrapper
+      = image_tag "sheba-yemeni-food-logo.png"
+    = render "recipe", recipe: recipes.first
+
+  .cards.small-cards
+    -# = render recipes
+    - recipes.each_with_index do |recipe, index|
+      - if index == 5
+        .card
+          = render "ads/display"
+      = render recipe
+    = will_paginate recipes
+

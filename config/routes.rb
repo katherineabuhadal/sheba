@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  root to: 'posts#index'
+  root to: 'recipes#index'
 
-  get "/content(/:id)", controller: :posts, action: 'show' #Redirect legacy urls
-  # get ":id", controller: :posts, action: 'show'
+  get "/content(/:id)", controller: :recipes, action: 'show' #Redirect legacy urls
+  # get ":id", controller: :recipes, action: 'show'
 
-  resources :posts, only: [:new, :show, :create, :index, :update, :edit] do
+  resources :recipes, only: [:new, :show, :create, :index, :update, :edit] do
     resources :comments, only: [:new, :create]
   end
 end
