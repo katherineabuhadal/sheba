@@ -6,7 +6,7 @@ gem 'mysql2'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'unicorn', '~> 4.9.0'
+gem 'puma'
 gem 'safe_attributes'
 gem 'pry'
 gem 'haml'
@@ -22,6 +22,10 @@ gem 'responders', '~> 2.0'
 gem 'font-awesome-sass'
 gem 'will_paginate', '~> 3.0.6'
 gem 'high_voltage', '~> 2.4.0'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.1'
