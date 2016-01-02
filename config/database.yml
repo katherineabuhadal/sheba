@@ -55,8 +55,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-# production:
-#   <<: *default
-#   database: sheba_production
-#   username: sheba
-#   password: <%= ENV['SHEBA_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  database: sheba_production
+  username: sheba
+  password: <%= ENV['SHEBA_DATABASE_PASSWORD'] %>
