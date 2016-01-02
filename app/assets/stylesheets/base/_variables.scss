@@ -1,3 +1,5 @@
+@import "colors";
+
 // Typography
 $base-font-family: $helvetica;
 $heading-font-family: $base-font-family;
@@ -14,20 +16,6 @@ $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
-
-// Colors
-$blue: #477dca;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
-
-$sheba-red: #b32221;
-$muted-blue: #2B91D5;
-$bright-blue: #1AA4FF;
-$bright-yellow: #CCCA02;
-$muted-yellow: #85841B;
-$burgundy: #4D0100;
-$dark-blue: #003E66;
 
 // Font Colors
 $base-background-color: #fff;

@@ -1,9 +1,10 @@
 .comment {
   $comment-gutter: 1.4em;
-  $comment-image-padding: 0.3em;
+  $comment-image-padding: 0.35em;
   // $comment-image-width: 5em;
   $comment-color: $base-font-color;
-  $comment-background: lighten($action-color, 15%);
+  $comment-background: lighten($accent-color, 15%);
+  $comment-background: $accent-color;
   $comment-detail-color: transparentize($comment-color, 0.5);
   $comment-image-vert-alignment: top;
 
@@ -27,7 +28,7 @@
       color: white;
       border-radius: $base-border-radius;
       display: block;
-      font-size: 3em;
+      font-size: 2.75em;
       max-width: none;
       padding: $comment-image-padding;
       // width: $comment-image-width;

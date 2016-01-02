@@ -1,9 +1,5 @@
 = form_for post, html: { class: 'form-horizontal', multipart: true }  do |f|
-  - if post.errors.any?
-    #error_explanation
-      %ul
-        - post.errors.full_messages.each do |message|
-          %li= message
+  = render "error_messages", target: post
   .field
     = f.label :title
     = f.text_field :title
