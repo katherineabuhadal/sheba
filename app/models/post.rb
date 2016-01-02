@@ -17,7 +17,7 @@ class Post < ActiveRecord::Base
     created_at.strftime("%m.%d.%Y")
   end
 
-  # def to_param
-  #   permalink
-  # end
+  def to_param
+    permalink
+  end
 end

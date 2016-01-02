@@ -50,6 +50,10 @@ namespace :import do
         establish_connection 'sheba_drupal_dump'
         self.table_name = "field_data_field_video"
       end
+      class UrlAlias < ActiveRecord::Base
+        establish_connection 'sheba_drupal_dump'
+        self.table_name = "url_alias"
+      end
 
     end
 

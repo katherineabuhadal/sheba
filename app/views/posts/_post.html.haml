@@ -7,5 +7,5 @@
     .card-copy
       %p= raw post.content.truncate(100, separator: " ") if post.content
       = post.date
-      = link_to 'Show', post
+      = link_to 'Show', post.permalink
       = link_to 'Edit', [:edit, post]

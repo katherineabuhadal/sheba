@@ -33,7 +33,7 @@ class PostsController < ApplicationController
   private
 
   def post
-    @_post ||= params[:id] ? Post.find(params[:id]) : Post.new(post_params)
+    @_post ||= params[:id] ? Post.find_by(permalink: params[:id]) : Post.new(post_params)
   end
   helper_method :post
 

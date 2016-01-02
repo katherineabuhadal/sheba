@@ -16,6 +16,8 @@ class DrupalImporter
       created_at: created_at,
       updated_at: updated_at,
       ingredients: ingredients,
+      permalink: permalink,
+      published: true,
     )
 
     if image_path
@@ -69,6 +71,11 @@ class DrupalImporter
       .gsub(/<.*?>/m, '')
       .gsub(/&.*?;/, '')
       .gsub(/[\r\n]+/, "\n")
+  end
+
+  def permalink
+    url_alias = Drupal::UrlAlias.where(source: "node/#{@node.id}").first.alias
+    url_alias.gsub("content/", "")
   end
 
   def parent_comments
