@@ -9,7 +9,7 @@
 }
 
 .logo-wrapper {
-  @include flex-basis(2em);
+  @include flex-basis(7.5em);
   @include flex-grow(1);
   @include transition (all 0.2s ease-in-out);
   position: relative;
@@ -17,7 +17,7 @@
 
 .primary-cards {
   .card {
-    @include flex-basis(22.5em);
+    @include flex-basis(28em);
 
     .card-image {
       max-height: 350px;
@@ -111,4 +111,3 @@
     }
   }
 }
-

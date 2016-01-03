@@ -27,6 +27,7 @@
 
 .outer-container {
   @include outer-container;
+  padding-top: 80px;
   // max-width: 90em;
 }
 

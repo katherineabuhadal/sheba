@@ -33,7 +33,7 @@ class RecipesController < ApplicationController
   helper_method :recipe
 
   def recipes
-    @_recipes ||= Recipe.published.ordered.paginate(page: params[:page], per_page: 12)
+    @_recipes ||= Recipe.published.ordered.paginate(page: params[:page], per_page: 10)
   end
   helper_method :recipes
 
