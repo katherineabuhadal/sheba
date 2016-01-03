@@ -7,6 +7,9 @@
     = f.label :content
     = f.text_area :content
   .field
+    = f.label :ingredients
+    = f.text_area :ingredients
+  .field
     = file_field_tag "images[]", type: :file, multiple: true
   .field
     = f.label :permalink

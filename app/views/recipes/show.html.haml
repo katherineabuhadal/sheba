@@ -12,6 +12,7 @@
     = link_to 'Edit', [:edit, recipe]
 .inner-container
   %p= recipe.content
+  %p= raw recipe.ingredients
   = raw recipe.video_link.english_link if recipe.video_link
   = render "ads/text"
 

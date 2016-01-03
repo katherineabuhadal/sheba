@@ -66,11 +66,6 @@ class DrupalImporter
   def ingredients
     return unless @ingredients
     @ingredients.field_ingredients_value
-      .gsub(/<script.*?script>/m, '')
-      .gsub(/<style.*?style>/m, '')
-      .gsub(/<.*?>/m, '')
-      .gsub(/&.*?;/, '')
-      .gsub(/[\r\n]+/, "\n")
   end
 
   def permalink
