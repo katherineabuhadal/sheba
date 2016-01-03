@@ -1,5 +1,6 @@
 class Comment < ActiveRecord::Base
   belongs_to :recipe
+  belongs_to :user
   validates :recipe, :content, :name, presence: true
 
   class << self

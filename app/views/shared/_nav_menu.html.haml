@@ -9,8 +9,11 @@
           = link_to 'About', page_path('about')
         %li.nav-link
           = link_to 'Contact', page_path('contact')
-        %li.nav-link
-          = link_to 'New Recipe', [:new, :recipe]
+        - if current_user
+          %li.nav-link
+            = link_to 'New Recipe', [:new, :recipe]
+          %li.nav-link
+            = link_to 'Sign Out', [:destroy, :user, :session], method: :delete
 :javascript
   $(document).ready(function() {
     var menuToggle = $('#js-mobile-menu').unbind();

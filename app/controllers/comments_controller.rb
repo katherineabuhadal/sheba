@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
   end
 
   def create
+    set_user
     if comment.save(comment_params)
       message(:notice, :saved)
       redirect_to recipe
@@ -29,5 +30,11 @@ class CommentsController < ApplicationController
       :name,
       :content,
     )
+  end
+
+  def set_user
+    return unless current_user
+    comment.user = current_user
+    comment.name = current_user.name
   end
 end

@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!, only: [:edit, :create, :update]
 
   def index
   end

@@ -1,5 +1,5 @@
-= link_to recipe do
-  .card
+.card
+  = link_to recipe do
     .card-image
       = image_tag recipe.primary_image
     .card-header
@@ -7,5 +7,4 @@
     .card-copy
       %p= raw recipe.content.truncate(100, separator: " ") if recipe.content
       = recipe.date
-      = link_to 'Show', recipe.permalink
-      = link_to 'Edit', [:edit, recipe]
+
