@@ -1,7 +1,7 @@
 class Comment < ActiveRecord::Base
-  belongs_to :recipe
+  belongs_to :post
   belongs_to :user
-  validates :recipe, :content, :name, presence: true
+  validates :post, :content, :name, presence: true
 
   class << self
     def parent_comments

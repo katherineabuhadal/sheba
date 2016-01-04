@@ -1,5 +1,5 @@
 class Picture < ActiveRecord::Base
-  belongs_to :recipe
+  belongs_to :post
 
   has_attached_file :image,
     path: ":rails_root/public/images/:id/:filename",

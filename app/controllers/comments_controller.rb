@@ -21,9 +21,13 @@ class CommentsController < ApplicationController
   helper_method :comment
 
   def recipe
-    @_recipe ||= Recipe.find_by(permalink: params[:recipe_id])
+    @_recipe ||= Post.find_by(permalink: post_id)
   end
   helper_method :recipe
+
+  def post_id
+    params[:recipe_id] ? params[:recipe_id] : params[:content_id]
+  end
 
   def comment_params
     params.require(:comment).permit(

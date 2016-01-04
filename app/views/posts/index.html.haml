@@ -5,15 +5,15 @@
         = image_tag "sheba-yemeni-food-logo.png"
         %div
           .g-ytsubscribe{"data-channel" => "shebayemenifood", "data-count" => "default", "data-layout" => "full"}
-    = render "recipe", recipe: recipes.first
+    = render "post", post: posts.first
 
   .cards.small-cards
-    - recipes.each_with_index do |recipe, index|
+    - posts.each_with_index do |post, index|
       - if index == 5 || index == 8
         .card
           = render "ads/display"
-      = render recipe
+      = render "post", post: post
 
 %center.breathe
-  = will_paginate recipes
+  = will_paginate posts
 

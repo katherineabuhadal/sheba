@@ -105,3 +105,21 @@ body {
 .breathe {
   padding-bottom: 1.5em;
 }
+
+.tag {
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 80%;
+}
+
+.tag-default {
+  background-color: $lighter-gray;
+  a {
+    color: $medium-dark-gray;
+
+    &:hover {
+      color: $dark-gray;
+    }
+  }
+}
