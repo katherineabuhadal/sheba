@@ -10,6 +10,6 @@
     %span.date= post.date
     .stats
       %ul
-        -# %li= pinterest_link(options = { media: request.protocol + request.host_with_port + post.primary_image.url, description: post.title, url: polymorphic_url(post) })
-        -# %li= facebook_link(options = { url: polymorphic_url(post)} )
+        %li= pinterest_link(options = { media: request.protocol + request.host_with_port + post.primary_image.url, description: post.title, url: polymorphic_url(post) })
+        %li= facebook_link(options = { url: polymorphic_url(post)} )
 

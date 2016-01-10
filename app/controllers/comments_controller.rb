@@ -7,23 +7,23 @@ class CommentsController < ApplicationController
     set_user
     if comment.save(comment_params)
       message(:notice, :saved)
-      redirect_to recipe
+      redirect_to post
     else
-      render "recipes/show"
+      render "posts/show"
     end
   end
 
   private
 
   def comment
-    @_comment ||= recipe.comments.new(comment_params)
+    @_comment ||= post.comments.new(comment_params)
   end
   helper_method :comment
 
-  def recipe
-    @_recipe ||= Post.find_by(permalink: post_id)
+  def post
+    @_post ||= Post.find_by(permalink: post_id)
   end
-  helper_method :recipe
+  helper_method :post
 
   def post_id
     params[:recipe_id] ? params[:recipe_id] : params[:content_id]
