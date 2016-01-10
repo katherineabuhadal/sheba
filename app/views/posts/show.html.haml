@@ -3,8 +3,8 @@
 .post-image-wrapper
   = image_tag post.primary_image
   .social-buttons-overlay
-    = pinterest_link(options = { media: request.protocol + request.host_with_port + post.primary_image.url,
-      description: post.title })
+    = pinterest_link(options = { media: (request.protocol + request.host_with_port + post.primary_image.url), description: post.title })
+    = facebook_link(options = { url: polymorphic_url(post)} )
 
 .image-info
   %h1= post.title

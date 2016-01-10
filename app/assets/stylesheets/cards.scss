@@ -111,3 +111,45 @@
     }
   }
 }
+
+.stats-wrapper {
+  padding: $base-spacing / 2;
+  .date {
+    color: $medium-gray;
+    font-style: italic;
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+}
+
+.stats {
+  float: right;
+  $stats-color: lighten($action-color, 10%);
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+    float: left;
+    font-size: 1.2em;
+    line-height: 1.1em;
+    padding: 0 0.7em;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  span {
+    color: $base-font-color;
+    display: block;
+    font-size: 0.7em;
+    font-weight: normal;
+  }
+}

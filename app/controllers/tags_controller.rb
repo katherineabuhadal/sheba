@@ -10,8 +10,4 @@ class TagsController < ApplicationController
   end
   helper_method :_tag
 
-  def posts
-
-  end
-
 end
