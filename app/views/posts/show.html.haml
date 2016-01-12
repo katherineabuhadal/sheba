@@ -25,3 +25,14 @@
   = render comment
   %div{class: "child-comment"}= render comment.children
 
+:javascript
+  $(function() {
+    $('.reply-button').click(function(event) {
+      event.preventDefault();
+      $(this).parent().find('.reply-form').show();
+    });
+    $('.cancel-button').click(function(event) {
+      event.preventDefault();
+      $(this).parent().parent().hide();
+    });
+  });

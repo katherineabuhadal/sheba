@@ -4,4 +4,13 @@
   .comment-content
     %h1= comment.name
     %p= raw comment.content
-    %p.comment-detail= comment.date
+    %span.comment-detail= comment.date
+    - if comment.is_a_parent?
+      = link_to "Reply", '#', class: 'reply-button pull-right'
+    %div.reply-form.hidden{ id: "comment_#{comment.id}"}
+      = form_for [comment, reply] do |f|
+        = f.text_field :name, placeholder: "Name"
+        = f.text_area :content, placeholder: "Reply"
+        = f.submit "Submit"
+        = link_to "Cancel", '#', class: 'cancel-button btn btn-link'
+

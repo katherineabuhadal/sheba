@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create]
   end
 
+  resources :comments, only: [] do
+    resources :comments, only: [:create]
+  end
+
   resources :tags, only: [:show]
 
   # devise_for :users, controllers: { sessions: "users/sessions" }

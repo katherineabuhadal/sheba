@@ -56,6 +56,11 @@ class PostsController < ApplicationController
   end
   helper_method :comment
 
+  def reply
+    @_reply ||= post.comments.new
+  end
+  helper_method :reply
+
   def create_post_pictures
     return unless params[:images]
     params[:images].each do |image|

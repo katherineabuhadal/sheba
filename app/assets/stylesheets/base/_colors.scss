@@ -13,6 +13,10 @@ $muted-yellow: #85841B;
 $burgundy: #4D0100;
 $dark-blue: #003E66;
 
+//Primary Colors
 $primary-color: $bright-blue;
+$light-primary-color: lighten($primary-color, 35);
+
+//Accent Colors
 $accent-color: $bright-yellow;
 

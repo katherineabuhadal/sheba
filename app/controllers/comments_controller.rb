@@ -20,8 +20,17 @@ class CommentsController < ApplicationController
   end
   helper_method :comment
 
+  def reply
+    @_reply ||= post.comments.new(comment_params)
+  end
+  helper_method :reply
+
+  def parent
+    @_parent ||= params[:comment_id] ? Comment.find(params[:comment_id]) : nil
+  end
+
   def post
-    @_post ||= Post.find_by(permalink: post_id)
+    @_post ||= parent ? parent.post : Post.find_by(permalink: post_id)
   end
   helper_method :post
 
@@ -33,7 +42,7 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(
       :name,
       :content,
-    )
+    ).merge(parent: parent)
   end
 
   def set_user

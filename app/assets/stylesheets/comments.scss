@@ -53,7 +53,16 @@
       margin-bottom: 0.5em;
     }
 
-    p.comment-detail {
+    .reply-button {
+      font-size: 0.65em;
+      background: $light-primary-color;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: $base-border-radius;
+    }
+
+    span.comment-detail {
       color: $comment-detail-color;
       font-size: 0.9em;
       font-style: italic;
@@ -65,3 +74,6 @@
   margin-left: 82px;
 }
 
+.reply-form {
+  margin-top: 1em;
+}
