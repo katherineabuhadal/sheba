@@ -15,4 +15,9 @@ module ApplicationHelper
     raw "<div class='fb-like' data-href=#{url} data-layout='button_count' data-action='like' data-show-faces='false' data-share='false'></div>"
   end
 
+  def image_link(post)
+    return unless post.primary_image
+    request.protocol + request.host_with_post + post.primary_image.url
+  end
+
 end
