@@ -39,7 +39,7 @@ class PostsController < ApplicationController
   helper_method :posts
 
   def post_params
-    (params[:post] || ActionController::Parameters.new({})).permit(
+    (params[:recipe] || ActionController::Parameters.new({})).permit(
       :title,
       :content,
       :published_at,
@@ -47,6 +47,7 @@ class PostsController < ApplicationController
       :external_link,
       :style,
       :tag_list,
+      :ingredients,
       :permalink
     )
   end

@@ -1,5 +1,5 @@
-= form_for recipe, html: { class: 'form-horizontal', multipart: true }  do |f|
-  = render "error_messages", target: recipe
+= form_for post, html: { class: 'form-horizontal', multipart: true }  do |f|
+  = render "error_messages", target: post
   .field
     = f.label :title
     = f.text_field :title
@@ -11,6 +11,9 @@
     = f.text_area :ingredients
   .field
     = file_field_tag "images[]", type: :file, multiple: true
+  .field
+    = f.label :published
+    = f.check_box :published
   .field
     = f.label :permalink
     = f.text_field :permalink

@@ -23,7 +23,8 @@ gem 'font-awesome-sass'
 gem 'will_paginate', '~> 3.0.6'
 gem 'high_voltage', '~> 2.4.0'
 gem 'devise'
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '~> 1'
+gem "binding_of_caller"
 
 group :production do
   gem 'rails_12factor'
@@ -35,6 +36,7 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem "better_errors"
 end
 
 group :test do
