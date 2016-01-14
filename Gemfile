@@ -23,6 +23,7 @@ gem 'font-awesome-sass'
 gem 'will_paginate', '~> 3.0.6'
 gem 'high_voltage', '~> 2.4.0'
 gem 'devise'
+gem 'aws-sdk', '~> 2'
 
 group :production do
   gem 'rails_12factor'
