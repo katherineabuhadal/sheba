@@ -13,6 +13,7 @@
       -# = render :partial => 'shared/google_analytics', :formats => [:js]
 
   %body
+    = render "flashes"
     = render 'shared/nav_menu'
     .outer-container
       = yield

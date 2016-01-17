@@ -20,4 +20,7 @@ Rails.application.routes.draw do
 
   # devise_for :users, controllers: { sessions: "users/sessions" }
   devise_for :users, :controllers => { registrations: 'users/registrations' }
+
+  get 'contact', to: 'messages#new', as: 'contact'
+  resources :messages, only: [:create]
 end
