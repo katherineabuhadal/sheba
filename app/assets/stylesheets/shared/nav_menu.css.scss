@@ -4,7 +4,7 @@ header.navigation {
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;
   $navigation-color: transparentize(white, 0.3);
-  $navigation-color-hover: white;
+  $navigation-color-hover: $accent-color;
   $navigation-height: 60px;
   $navigation-nav-button-background: $action-color;
   $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
@@ -109,6 +109,8 @@ header.navigation {
     text-align: right;
     width: 100%;
     z-index: 9999;
+    text-transform: uppercase;
+    font-weight: 600;
 
     @include media ($horizontal-bar-mode) {
       background: transparent;
