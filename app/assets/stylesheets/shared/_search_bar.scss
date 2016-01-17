@@ -1,0 +1,33 @@
+.search-bar {
+  $search-bar-border-color: $base-border-color;
+  $search-bar-border: 1px solid $search-bar-border-color;
+  $search-bar-background: lighten($search-bar-border-color, 10%);
+
+  position: relative;
+  margin-top: 15px;
+
+  input[type=search] {
+    @include appearance(none);
+    @include transition(border-color);
+    border: 1px solid $base-border-color;
+    box-sizing: border-box;
+    display: block;
+    font-size: 1em;
+    margin: 0;
+    padding: ($base-spacing / 3) ($base-spacing / 3);
+    position: relative;
+    width: 100%;
+  }
+  a {
+    float: right;
+    text-transform: uppercase;
+    font-size: 75%;
+  }
+
+  button[type=submit],  {
+    @include position(absolute, 0em 0em 0em null);
+    outline: none;
+    padding: 5px 10px;
+
+  }
+}

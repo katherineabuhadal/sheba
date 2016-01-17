@@ -1,19 +1,16 @@
 .card-wrapper
-  .cards.primary-cards
-    .logo-wrapper
-      %center
-        = image_tag "sheba-yemeni-food-logo.png"
-        %div
-          .g-ytsubscribe{"data-channel" => "shebayemenifood", "data-count" => "default", "data-layout" => "full"}
-    = render "post", post: posts.first
-
-  .cards.small-cards
-    - posts.each_with_index do |post, index|
-      - if index == 5 || index == 8
-        .card
-          = render "ads/display"
-      = render "post", post: post
-
-%center.breathe
-  = will_paginate posts
-
+  - if posts.present?
+    = render "shared/logo"
+    .cards.small-cards
+      - posts.each_with_index do |post, index|
+        - if index == 5 || index == 8
+          .card
+            = render "ads/display"
+        = render "post", post: post
+    %center.breathe
+      = will_paginate posts
+  - else
+    %div
+      = render "shared/logo"
+      %div.flash-notice
+        No posts were found. Try changing the search criteria.

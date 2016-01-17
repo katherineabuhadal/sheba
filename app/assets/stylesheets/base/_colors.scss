@@ -5,7 +5,7 @@ $medium-dark-gray: #5d5d5d;
 $light-gray: #ddd;
 $lighter-gray: #eaeaea;
 
-$sheba-red: #b32221;
+$red: #b32221;
 $muted-blue: #2B91D5;
 $bright-blue: #1AA4FF;
 $bright-yellow: #CCCA02;
@@ -13,10 +13,26 @@ $muted-yellow: #85841B;
 $burgundy: #4D0100;
 $dark-blue: #003E66;
 
-//Primary Colors
+//Primary Color Variations
 $primary-color: $bright-blue;
 $light-primary-color: lighten($primary-color, 35);
 
-//Accent Colors
+//Accent Color Variations
 $accent-color: $bright-yellow;
+
+//Alert Color Variations
+$alert-color: $bright-yellow;
+$light-alert-color: lighten($alert-color, 35);
+
+//Error Color Variations
+$error-color: $red;
+$light-error-color: lighten($red, 40);
+
+//Notice Color Variations
+$notice-color: $bright-blue;
+$light-notice-color: lighten($notice-color, 30);
+
+//Success Color Variations
+$success-color: #e6efc2;
+
 

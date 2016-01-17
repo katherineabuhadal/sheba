@@ -10,6 +10,16 @@ class Post < ActiveRecord::Base
   scope :published, -> { where(published: true) }
 
   class << self
+    def search(params = {})
+      scope = ordered
+      scope = scope.query(params[:search]) if params[:search].present?
+      scope
+    end
+
+    def query(term)
+      wild_term = "%#{term}%"
+      where(arel_table[:title].matches(wild_term).or(arel_table[:content].matches(wild_term)))
+    end
   end
 
   def primary_image

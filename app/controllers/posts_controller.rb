@@ -34,7 +34,7 @@ class PostsController < ApplicationController
   end
 
   def posts
-    @_posts ||= Post.published.ordered.paginate(page: params[:page], per_page: 10)
+    @_posts ||= Post.published.ordered.search(params).paginate(page: params[:page], per_page: 10)
   end
   helper_method :posts
 

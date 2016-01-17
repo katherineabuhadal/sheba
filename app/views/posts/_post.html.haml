@@ -1,7 +1,7 @@
 .card
   = link_to post do
     .card-image
-      = image_tag post.primary_image
+      = image_tag post.primary_image if post
     .card-header
       = post.title
     .card-copy
