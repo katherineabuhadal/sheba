@@ -50,6 +50,16 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'sheba.herokuapp.com' }
   Rails.application.routes.default_url_options[:host] = 'sheba.herokuapp.com'
 
+  ActionMailer::Base.smtp_settings = {
+    :port           => 587,
+    :address        => 'smtp.mailgun.org',
+    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+    :domain         => 'sheba.herokuapp.com',
+    :authentication => :plain,
+  }
+  ActionMailer::Base.delivery_method = :smtp
+
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
