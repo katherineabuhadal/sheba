@@ -55,6 +55,10 @@ textarea {
   min-height: 70px;
 }
 
+.tall-text-area {
+  min-height: 140px;
+}
+
 input[type="search"] {
   @include appearance(none);
 }

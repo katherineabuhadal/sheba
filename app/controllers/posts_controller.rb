@@ -44,22 +44,6 @@ class PostsController < ApplicationController
   end
   helper_method :posts
 
-  def post_params
-    (params[:recipe] || ActionController::Parameters.new({})).permit(
-      :title,
-      :content,
-      :published_at,
-      :published,
-      :external_link,
-      :style,
-      :tag_list,
-      :ingredient_list,
-      :category_list,
-      :ingredients,
-      :permalink
-    )
-  end
-
   def comment
     @_comment ||= post.comments.new
   end

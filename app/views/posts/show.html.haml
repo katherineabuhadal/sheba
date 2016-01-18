@@ -17,10 +17,10 @@
   %p= post.content
 
   %h4 Ingredients
-  %p= raw post.ingredients
+  %p= simple_format(raw post.ingredients)
 
   %h4 How to make
-  %p= raw post.instructions
+  %p= simple_format(raw post.instructions)
 
   = raw post.video_link.english_link if post.video_link
   = render "ads/text"
