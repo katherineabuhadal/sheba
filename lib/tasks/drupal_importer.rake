@@ -3,8 +3,12 @@ namespace :import do
   task :clear_db => :environment do
     Recipe.destroy_all
     Comment.destroy_all
-    ActiveRecord::Base.connection.execute("TRUNCATE #{Recipe.quoted_table_name}")
+    Tagging.destroy_all
+    Tag.destroy_all
+    ActiveRecord::Base.connection.execute("TRUNCATE #{Post.quoted_table_name}")
     ActiveRecord::Base.connection.execute("TRUNCATE #{Comment.quoted_table_name}")
+    ActiveRecord::Base.connection.execute("TRUNCATE #{Tag.quoted_table_name}")
+    ActiveRecord::Base.connection.execute("TRUNCATE #{Tagging.quoted_table_name}")
   end
   desc "Import recipes from drupal db"
   task :posts => :environment do
@@ -53,6 +57,18 @@ namespace :import do
       class UrlAlias < ActiveRecord::Base
         establish_connection 'sheba_drupal_dump'
         self.table_name = "url_alias"
+      end
+      class Tag < ActiveRecord::Base
+        establish_connection 'sheba_drupal_dump'
+        self.table_name = "taxonomy_term_data"
+      end
+      class Tagging < ActiveRecord::Base
+        establish_connection 'sheba_drupal_dump'
+        self.table_name = "taxonomy_index"
+      end
+      class Category < ActiveRecord::Base
+        establish_connection 'sheba_drupal_dump'
+        self.table_name = "taxonomy_vocabulary"
       end
 
     end

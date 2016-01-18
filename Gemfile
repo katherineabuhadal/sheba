@@ -25,6 +25,7 @@ gem 'high_voltage', '~> 2.4.0'
 gem 'devise'
 gem 'aws-sdk', '~> 1'
 gem "binding_of_caller"
+gem 'meta-tags'
 
 group :production do
   gem 'rails_12factor'

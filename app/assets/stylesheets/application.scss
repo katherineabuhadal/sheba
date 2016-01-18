@@ -28,6 +28,8 @@
 .outer-container {
   @include outer-container;
   padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
   // max-width: 90em;
 }
 
@@ -127,3 +129,14 @@ body {
 .hidden {
   display: none;
 }
+
+.social-buttons {
+  float: right;
+}
+
+.facebook-wrapper {
+  margin-top: -7px;
+  padding-left: 25px;
+  float: right;
+}
+

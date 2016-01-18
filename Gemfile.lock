@@ -131,6 +131,8 @@ GEM
     lumberjack (1.0.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    meta-tags (2.1.0)
+      actionpack (>= 3.0.0)
     method_source (0.8.2)
     mime-types (2.6.1)
     mimemagic (0.3.0)
@@ -297,6 +299,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   letter_opener
+  meta-tags
   minitest
   mysql2
   neat

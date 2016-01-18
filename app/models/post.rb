@@ -34,11 +34,39 @@ class Post < ActiveRecord::Base
     tags.pluck(:name).join(", ")
   end
 
-  def tag_list=(new_tag_name_list)
-    tag_names = new_tag_name_list.split(", ")
-    new_tags = tag_names.map do |tag_name|
-      Tag.find_or_create_by(name: tag_name)
-    end
-    self.tags = new_tags
+  def ingredient_list
+    tags.where(category: Category.find_or_create_by(name: "Ingredients")).pluck(:name).join(", ")
   end
+
+  def category_list
+    tags.where(category: Category.find_or_create_by(name: "Categories")).pluck(:name).join(", ")
+  end
+
+  def tag_list=(new_tag_list)
+    new_tags = create_tags({ new_tag_list: new_tag_list, category: nil })
+    self.tags = tags + new_tags
+  end
+
+  def category_list=(new_tag_list)
+    category = Category.find_or_create_by(name: "Categories")
+    new_tags = create_tags({ new_tag_list: new_tag_list, category: category })
+    self.tags = tags + new_tags
+  end
+
+  def ingredient_list=(new_tag_list)
+    category = Category.find_or_create_by(name: "Ingredients")
+    new_tags = create_tags({ new_tag_list: new_tag_list, category: category })
+    self.tags = tags + new_tags
+  end
+
+  def create_tags(options = {})
+    tag_names = options[:new_tag_list].split(", ")
+    category = options[:category]
+    new_tags = tag_names.map do |tag_name|
+      tag = Tag.find_or_create_by(name: tag_name)
+      tag.update_attributes(category: category) unless tag.category
+      tag
+    end
+  end
+
 end

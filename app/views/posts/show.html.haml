@@ -1,21 +1,27 @@
-= content_for :title, post.title
-
 .post-image-wrapper
   = image_tag post.primary_image
-  .social-buttons-overlay
-    = pinterest_link(options = { media: image_link(post), description: post.title })
-    = facebook_link(options = { url: polymorphic_url(post)} )
-
 .image-info
-  %h1= post.title
-  %span
+  %h1
+    = post.title
+    .social-buttons
+      = pinterest_link(options = { media: image_link(post), description: post.title })
+      %span.facebook-wrapper= facebook_link(options = { url: polymorphic_url(post)} )
+
+  -# .breathe= render post.tags
+  %div
     = post.date
-    |
-    = link_to 'Edit', [:edit, post]
-  .breathe= render post.tags
+    - if current_user
+      |
+      = link_to 'Edit', [:edit, post]
 .inner-container
   %p= post.content
+
+  %h4 Ingredients
   %p= raw post.ingredients
+
+  %h4 How to make
+  %p= raw post.instructions
+
   = raw post.video_link.english_link if post.video_link
   = render "ads/text"
 

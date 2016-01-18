@@ -1,9 +1,9 @@
 !!!
 %html
   %head
-    %title= yield(:title).present? ? yield(:title) + " | Sheba Yemeni Food" : "Sheba Yemeni Food"
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = display_meta_tags
     = csrf_meta_tags
 
   %script{:async => "", :defer => "defer", :src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}
@@ -13,8 +13,8 @@
       -# = render :partial => 'shared/google_analytics', :formats => [:js]
 
   %body
-    = render "flashes"
     = render 'shared/nav_menu'
+    = render "flashes"
     .outer-container
       = yield
     = render 'shared/footer'

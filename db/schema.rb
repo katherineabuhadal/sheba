@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160104012138) do
+ActiveRecord::Schema.define(version: 20160118213735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.integer  "user_id"
@@ -37,14 +43,15 @@ ActiveRecord::Schema.define(version: 20160104012138) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title",                       null: false
+    t.string   "title",                        null: false
     t.text     "content"
     t.text     "ingredients"
-    t.boolean  "published",   default: false, null: false
+    t.boolean  "published",    default: false, null: false
     t.string   "permalink"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "type"
+    t.text     "instructions"
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -55,11 +62,13 @@ ActiveRecord::Schema.define(version: 20160104012138) do
   add_index "taggings", ["post_id", "tag_id"], name: "index_taggings_on_post_id_and_tag_id", unique: true, using: :btree
 
   create_table "tags", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",        null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "category_id"
   end
 
+  add_index "tags", ["category_id"], name: "index_tags_on_category_id", using: :btree
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|

@@ -1,11 +1,17 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:edit, :create, :update]
+  before_action :authenticate_user!, only: [:edit, :create, :update, :new]
   before_action :find_post, only: [:show]
 
   def index
+    prepare_meta_tags title: "Recipes"
   end
 
   def show
+    prepare_meta_tags(title: post.title,
+                      description: post.content,
+                      keywords: post.tags.pluck(:name).take(5),
+                      image: post.primary_image,
+                      twitter: {card: "summary_large_image"})
   end
 
   def new
@@ -47,6 +53,8 @@ class PostsController < ApplicationController
       :external_link,
       :style,
       :tag_list,
+      :ingredient_list,
+      :category_list,
       :ingredients,
       :permalink
     )

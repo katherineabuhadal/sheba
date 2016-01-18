@@ -26,6 +26,7 @@ class DrupalImporter
       picture.save
     end
     find_comments
+    create_taggings
     create_video
   end
 
@@ -83,7 +84,7 @@ class DrupalImporter
 
   def create_comment(comment, parent_comment = nil)
     Comment.create(
-      recipe_id: @recipe.id,
+      post_id: @recipe.id,
       content: (comment_subject(comment).comment_body_value if comment_subject(comment)),
       title: comment.subject,
       name: comment.name,
@@ -103,13 +104,23 @@ class DrupalImporter
     end
   end
 
+  def create_taggings
+    taggings = Drupal::Tagging.where(nid: @node.id)
+    taggings.each do |tagging|
+      drupal_tag = Drupal::Tag.find_by(tid: tagging.tid)
+      category = Category.find_or_create_by(name: Drupal::Category.find_by(vid: drupal_tag.vid).name)
+      tag = Tag.find_or_create_by(name: drupal_tag.name.downcase, category: category)
+      @recipe.taggings.create(tag: tag)
+    end
+  end
+
   def video
     Drupal::Video.where(entity_id: @node.id).first
   end
 
   def create_video
     return unless video
-    VideoLink.create(english_link: video.field_video_value, recipe: @recipe)
+    VideoLink.create(english_link: video.field_video_value, post: @recipe)
   end
 
 end
