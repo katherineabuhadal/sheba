@@ -74,7 +74,7 @@ Rails.application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = false
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -96,5 +96,12 @@ Rails.application.configure do
       access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
       secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY')
     }
+  }
+
+  Rails.application.config.middleware.use ExceptionNotification::Rack,
+    :email => {
+    :email_prefix => "[ERROR] ",
+    :sender_address => %{"notifier" <notifier@shebayemenifood.com>},
+    :exception_recipients => %w{katherine.abu.hadal@gmail.com}
   }
 end

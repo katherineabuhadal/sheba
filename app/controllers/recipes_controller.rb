@@ -10,7 +10,7 @@ class RecipesController < PostsController
   private
 
   def post_params
-    (params[:content] || ActionController::Parameters.new({})).permit(
+    (params[:recipe] || ActionController::Parameters.new({})).permit(
       :title,
       :content,
       :published_at,

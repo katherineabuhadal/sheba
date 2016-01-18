@@ -1,0 +1,5 @@
+%h1= _tag.name
+
+.cards.small-cards
+  - _tag.posts.each do |post|
+    = render "posts/post", post: post
