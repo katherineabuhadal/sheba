@@ -27,7 +27,7 @@
 
 .small-cards {
   .card {
-    @include flex-basis(20em);
+    @include flex-basis(15em);
 
     .card-image {
       max-height: 185px;
