@@ -1,6 +1,7 @@
 class TagsController < ApplicationController
 
   def show
+    prepare_meta_tags(title: _tag.display_name)
   end
 
   private
