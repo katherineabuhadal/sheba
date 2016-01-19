@@ -40,8 +40,8 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(
-      :name,
-      :content,
+      # :name,
+      # :content,
     ).merge(parent: parent)
   end
 
