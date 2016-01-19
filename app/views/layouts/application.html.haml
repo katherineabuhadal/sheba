@@ -6,11 +6,10 @@
     = display_meta_tags
     = csrf_meta_tags
 
-  %script{:async => "", :defer => "defer", :src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}
-  = javascript_tag do
-    = yield(:javascripts)
-  - if Rails.env == 'production'
-    = render :partial => 'shared/google_analytics'
+    = javascript_tag do
+      = yield(:javascripts)
+    - if Rails.env == 'production'
+      = render :partial => 'shared/google_analytics'
 
   %body
     = render 'shared/nav_menu'
@@ -18,3 +17,4 @@
     .outer-container
       = yield
     = render 'shared/footer'
+    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
