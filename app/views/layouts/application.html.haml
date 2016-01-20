@@ -6,6 +6,7 @@
     = display_meta_tags
     = csrf_meta_tags
     %meta{charset: "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
 
     = javascript_tag do
       = yield(:javascripts)
