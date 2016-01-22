@@ -42,7 +42,7 @@
   $card-header-background: $card-background;
   $card-margin: 1em;
   $card-image-hover-opacity: 0.7;
-  $card-image-hover-color: $bright-yellow;
+  $card-image-hover-color: $warning-color;
 
   @include flex-grow(1);
   @include transition (all 0.2s ease-in-out);

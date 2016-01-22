@@ -21,11 +21,11 @@
 }
 
 .flash-alert {
-  @include flash($light-alert-color);
+  @include flash($light-warning-color);
 }
 
 .flash-error {
-  @include flash($light-error-color);
+  @include flash($light-danger-color);
 }
 
 .flash-notice {

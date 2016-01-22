@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
     title       = options[:title] ||= [controller_name, action_name].join(" ")
     description = options[:description] ||= "My name is Katherine, and I am on a journey to discover Yemeni cooking. Join me!"
     image       = options[:image] || ActionController::Base.helpers.asset_path("sheba-yemeni-food-logo.png")
+    keywords    = options[:keywords] || %w[yemeni recipes cooking food arabic]
     current_url = request.url
 
     defaults = {
@@ -22,7 +23,7 @@ class ApplicationController < ActionController::Base
       title:       title,
       image:       image,
       description: description,
-      keywords:    %w[yemeni recipes cooking food arabic],
+      keywords:    keywords,
       og: {
         url: current_url,
         site_name: site_name,

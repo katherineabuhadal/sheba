@@ -2,7 +2,7 @@
   $base-spacing: 1.5em !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  $footer-background: desaturate(darken($action-color, 20%), 30%);
+  $footer-background: desaturate(darken($primary-color, 5%), 5%);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
@@ -87,5 +87,49 @@
     max-width: 35em;
     text-align: center;
   }
+}
+
+.pre-footer-div {
+  $color: $success-color;
+  height: 15px;
+  background: $color;
+  $texture-top-background: $color;
+  $texture-bottom-background: $color;
+  @include texture(180deg, $texture-top-background,
+  $texture-bottom-background, 84, 0);
+}
+
+.post-footer-div {
+  $color: $primary-color;
+  height: 35px;
+  background: $color;
+
+  $texture-top-background: $color;
+  $texture-bottom-background: $color;
+  @include texture(180deg, $texture-top-background,
+  $texture-bottom-background, 87, 0);
+  /* Background pattern from subtlepatterns.com */
+}
+
+.second-footer-div {
+  height: 5px;
+  background: $danger-color;
+}
+
+.third-footer-div {
+  height: 15px;
+  background: $warning-color;
+}
+
+.footer-div {
+  $color: $success-color;
+  height: 50px;
+  $texture-top-background: $color;
+  $texture-bottom-background: $color;
+
+  $texture-top-background: lighten($color, 1%);
+  $texture-bottom-background: darken($color, 10%);
+  @include texture(180deg, $texture-top-background,
+  $texture-bottom-background, 73, 0);
 }
 

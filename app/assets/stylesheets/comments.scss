@@ -3,8 +3,7 @@
   $comment-image-padding: 0.35em;
   // $comment-image-width: 5em;
   $comment-color: $base-font-color;
-  $comment-background: lighten($accent-color, 15%);
-  $comment-background: $accent-color;
+  $comment-background: $warning-color;
   $comment-detail-color: transparentize($comment-color, 0.5);
   $comment-image-vert-alignment: top;
 
@@ -55,7 +54,7 @@
 
     .reply-button {
       font-size: 0.65em;
-      background: $light-primary-color;
+      background: $light-success-color;
       text-transform: uppercase;
       font-weight: bold;
       padding: 2px 8px;

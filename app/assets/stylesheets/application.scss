@@ -30,58 +30,17 @@
   padding-top: 80px;
   padding-left: 20px;
   padding-right: 20px;
-  // max-width: 90em;
-}
-
-.inner-container {
-  // margin: 0 1em 1.5em 1em;
 }
 
 body {
   margin: 0;
 }
 
-.pre-footer-div {
-  height: 15px;
-  background: $bright-yellow;
-  $texture-top-background: $bright-yellow;
-  $texture-bottom-background: $bright-yellow;
-  @include texture(180deg, $texture-top-background,
-  $texture-bottom-background, 84, 0);
-}
-
-.post-footer-div {
-  height: 35px;
-  background: $bright-blue;
-
-  $texture-top-background: $bright-blue;
-  $texture-bottom-background: $bright-blue;
-  @include texture(180deg, $texture-top-background,
-  $texture-bottom-background, 87, 0);
-  /* Background pattern from subtlepatterns.com */
-}
-
-.second-footer-div {
-  height: 5px;
-  background: $red;
-}
-
-.footer-div {
-  height: 50px;
-  $texture-top-background: $muted-yellow;
-  $texture-bottom-background: $muted-yellow;
-
-  $texture-top-background: lighten($muted-yellow, 1%);
-  $texture-bottom-background: darken($bright-yellow, 10%);
-  @include texture(180deg, $texture-top-background,
-  $texture-bottom-background, 73, 0);
-}
-
 // The mixin above should preferably be in a file of its own. Below is the code for the object that has the texture.
 
 .texture {
-  $texture-top-background: lighten($muted-yellow, 1%);
-  $texture-bottom-background: darken($bright-yellow, 10%);
+  $texture-top-background: lighten($yellow, 1%);
+  $texture-bottom-background: darken($yellow, 10%);
   height: 5em;
   width: 100%;
 
@@ -108,24 +67,6 @@ body {
   padding-bottom: 1.5em;
 }
 
-.tag {
-  padding: 5px 10px;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 80%;
-}
-
-.tag-default {
-  background-color: $lighter-gray;
-  a {
-    color: $medium-dark-gray;
-
-    &:hover {
-      color: $dark-gray;
-    }
-  }
-}
-
 .hidden {
   display: none;
 }
@@ -140,3 +81,28 @@ body {
   float: right;
 }
 
+.video-wrapper {
+  @include span-columns(5.75);
+  height: 20em;
+  @include media($mobile) { // As defined in _grid-settings.scss
+    @include span-columns(12);
+    max-width: 300px;
+    height: 14em;
+  }
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 52.25%;
+  padding-top: 36px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

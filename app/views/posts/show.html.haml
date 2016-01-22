@@ -3,9 +3,9 @@
 .image-info
   %h1
     = post.title
-    .social-buttons
-      = pinterest_link(options = { media: image_link(post), description: post.title })
-      %span.facebook-wrapper= facebook_link(options = { url: polymorphic_url(post)} )
+    -# .social-buttons
+    -#   = pinterest_link(options = { media: image_link(post), description: post.title })
+    -#   %span.facebook-wrapper= facebook_link(options = { url: polymorphic_url(post)} )
 
   - if post.tags.present?
     .breathe= render post.tags
@@ -14,17 +14,23 @@
     - if current_user
       |
       = link_to 'Edit', [:edit, post]
-.inner-container
-  %p= post.content
 
-  %h4 Ingredients
-  %p= simple_format(raw post.ingredients)
+%p= post.content
 
-  %h4 How to make
-  %p= simple_format(raw post.instructions)
+%h4 Ingredients
+%p= simple_format(raw post.ingredients)
 
-  = raw post.video_link.english_link if post.video_link
-  = render "ads/text"
+%h4 How to make
+%p= simple_format(raw post.instructions)
+
+= render "ads/text"
+
+.video-wrapper
+  .video-container
+    = raw post.video_link.english_link if post.video_link
+.video-wrapper
+  .video-container
+    = raw post.video_link.english_link if post.video_link
 
 %h2 Comments
 = render "comments/form", post: post
