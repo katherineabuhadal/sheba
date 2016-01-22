@@ -1,5 +1,8 @@
-%h1= _tag.display_name
+%h1= "#{_tag.display_name} | Sheba Yemeni Food"
 
 .cards.small-cards
-  - _tag.posts.each do |post|
+  - _tag.posts.each_with_index do |post, index|
+    - if index == 3 || index == 7
+      .card
+        = render "ads/display"
     = render "posts/post", post: post
