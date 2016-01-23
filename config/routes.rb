@@ -27,6 +27,9 @@ Rails.application.routes.draw do
   get "/meals/dessert", to: redirect('/tags/dessert', status: 301)
   get "/meals/dinner", to: redirect('/tags/dinner', status: 301)
   get "/meals/snacks", to: redirect('/tags/snacks', status: 301)
+  get "/lunch", to: redirect('/tags/lunch', status: 301)
   get "/breads", to: redirect('/tags/breads', status: 301)
+  get "/spices/yemeni-cooking", to: redirect('/tags/spices', status: 301)
+
 
 end
