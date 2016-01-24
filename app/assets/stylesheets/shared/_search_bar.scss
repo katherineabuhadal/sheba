@@ -24,10 +24,22 @@
     font-size: 75%;
   }
 
-  button[type=submit],  {
+  button[type=submit] {
     @include position(absolute, 0em 0em 0em null);
     outline: none;
     padding: 5px 10px;
 
   }
+}
+
+#mc_embed_signup input.mce_inline_error {
+    border-color: $danger-color !important;
+}
+
+#mc_embed_signup div.mce_inline_error {
+    margin-top: 1em !important;
+    padding: $base-spacing / 2 !important;
+    background-color: $light-danger-color !important;
+    z-index: 1;
+    color: darken($light-danger-color, 55%) !important;
 }

@@ -33,7 +33,7 @@
 }
 
 .flash-success {
-  @include flash($success-color);
+  @include flash($light-success-color);
 }
 
 .flash {
