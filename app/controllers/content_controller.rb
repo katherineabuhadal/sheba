@@ -7,8 +7,6 @@ class ContentController < PostsController
   end
   helper_method :post
 
-  private
-
   def post_params
     (params[:content] || ActionController::Parameters.new({})).permit(
       :title,
@@ -23,7 +21,7 @@ class ContentController < PostsController
       :tag_list,
       :ingredient_tag_list,
       :category_tag_list,
-      { video_links_attributes: [ :id, :url, :language ] }
+      { video_links_attributes: [ :url, :language ] }
     )
   end
 end

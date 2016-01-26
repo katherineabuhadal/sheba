@@ -7,4 +7,5 @@ class Tag < ActiveRecord::Base
   def display_name
     name.capitalize
   end
+
 end

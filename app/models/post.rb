@@ -12,8 +12,6 @@ class Post < ActiveRecord::Base
   scope :ordered,   -> { order(created_at: :desc) }
   scope :published, -> { where(published: true) }
 
-  accepts_nested_attributes_for :video_links
-
   class << self
     def search(params = {})
       scope = ordered
