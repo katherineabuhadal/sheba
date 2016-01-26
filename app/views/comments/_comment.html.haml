@@ -2,7 +2,12 @@
   .comment-image
     %i{alt: "sheba-guest-logo", class: "fa fa-comment"}
   .comment-content
-    %h1= comment.name
+    %h1
+      - if comment.user
+        = comment.user.name
+        .label.label-primary shebayemenifood
+      - else
+        = comment.name
     %p= raw comment.content
     %span.comment-detail= comment.date
     - if comment.is_a_parent?

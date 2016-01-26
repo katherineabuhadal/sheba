@@ -17,11 +17,11 @@ class RecipesController < PostsController
       :published,
       :external_link,
       :style,
-      :tag_list,
-      :ingredient_list,
-      :category_list,
       :ingredients,
       :instructions,
+      :tag_list,
+      :ingredient_tag_list,
+      :category_tag_list,
       :permalink
     )
   end

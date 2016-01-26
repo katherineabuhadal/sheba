@@ -1,13 +1,18 @@
 .label {
-  padding: .3em .6em .3em;
+  padding: .1em .4em .125em;
   display: inline;
-  font-size: 75%;
+  font-size: 70%;
   font-weight: bold;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25em;
+}
+
+.label-primary {
+  color: $primary-color;
+  background: $light-primary-color;
 }
 
 .tag {

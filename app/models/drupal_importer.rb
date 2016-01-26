@@ -108,9 +108,9 @@ class DrupalImporter
     taggings = Drupal::Tagging.where(nid: @node.id)
     taggings.each do |tagging|
       drupal_tag = Drupal::Tag.find_by(tid: tagging.tid)
-      category = Category.find_or_create_by(name: Drupal::Category.find_by(vid: drupal_tag.vid).name)
-      tag = Tag.find_or_create_by(name: drupal_tag.name.downcase, category: category)
-      @recipe.taggings.create(tag: tag)
+      tag = ::ActsAsTaggableOn::Tag.find_or_create_by(name: drupal_tag.name.downcase)
+      @recipe.tag_list.add(tag.name)
+      @recipe.save
     end
   end
 

@@ -7,7 +7,7 @@ class TagsController < ApplicationController
   private
 
   def _tag
-    @_tag ||= Tag.find_by(name: params[:id])
+    @_tag ||= Tag.find_by(permalink: params[:id])
   end
   helper_method :_tag
 

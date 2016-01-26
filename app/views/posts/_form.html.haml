@@ -25,13 +25,13 @@
       = ff.text_area :arabic_link
   .field
     = f.label :tag_list
-    = f.text_field :tag_list
+    = f.text_field :tag_list, value: post.tag_list.join(", ")
   .field
-    = f.label :ingredient_list
-    = f.text_field :ingredient_list
+    = f.label :ingredient_tag_list
+    = f.text_field :ingredient_tag_list, value: post.ingredient_tag_list.join(", ")
   .field
-    = f.label :category_list
-    = f.text_field :category_list
+    = f.label :category_tag_list
+    = f.text_field :category_tag_list, value: post.category_tag_list.join(", ")
   .actions
     = f.submit
 
