@@ -25,12 +25,11 @@
 
 = render "ads/text"
 
-.video-wrapper
-  .video-container
-    = raw post.video_link.english_link if post.video_link
-.video-wrapper
-  .video-container
-    = raw post.video_link.english_link if post.video_link
+- if post.video_links.present?
+  - post.video_links.each do |video|
+    .video-wrapper
+      .video-container
+        = raw video.url
 
 %h2 Comments
 = render "comments/form", post: post

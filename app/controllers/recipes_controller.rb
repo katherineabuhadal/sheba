@@ -19,10 +19,11 @@ class RecipesController < PostsController
       :style,
       :ingredients,
       :instructions,
+      :permalink,
       :tag_list,
       :ingredient_tag_list,
       :category_tag_list,
-      :permalink
+      { video_links_attributes: [ :id, :url, :language ] }
     )
   end
 

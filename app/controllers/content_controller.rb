@@ -17,12 +17,13 @@ class ContentController < PostsController
       :published,
       :external_link,
       :style,
-      :tag_list,
-      :ingredient_list,
-      :category_list,
       :ingredients,
       :instructions,
-      :permalink
+      :permalink,
+      :tag_list,
+      :ingredient_tag_list,
+      :category_tag_list,
+      { video_links_attributes: [ :id, :url, :language ] }
     )
   end
 end

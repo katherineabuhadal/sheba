@@ -4,13 +4,15 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :taggings
   has_many :tags, through: :taggings
-  has_one :video_link
+  has_many :video_links
 
   acts_as_taggable
   acts_as_taggable_on :category_tags, :ingredient_tags
 
   scope :ordered,   -> { order(created_at: :desc) }
   scope :published, -> { where(published: true) }
+
+  accepts_nested_attributes_for :video_links
 
   class << self
     def search(params = {})
