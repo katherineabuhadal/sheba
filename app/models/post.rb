@@ -4,10 +4,12 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :taggings
   has_many :tags, through: :taggings
-  has_many :video_links
+  has_many :video_links, as: :entity
 
   acts_as_taggable
   acts_as_taggable_on :category_tags, :ingredient_tags
+
+  accepts_nested_attributes_for :video_links, reject_if: :all_blank
 
   scope :ordered,   -> { order(created_at: :desc) }
   scope :published, -> { where(published: true) }

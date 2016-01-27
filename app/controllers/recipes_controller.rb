@@ -3,7 +3,7 @@ class RecipesController < PostsController
   private
 
   def post
-    @_post ||= params[:id] ? Post.find_by(permalink: params[:id]) : Post.new(post_params)
+    @_post ||= params[:id] ? Recipe.find_by(permalink: params[:id]) : Recipe.new(post_params)
   end
   helper_method :post
 
@@ -21,7 +21,7 @@ class RecipesController < PostsController
       :tag_list,
       :ingredient_tag_list,
       :category_tag_list,
-      { video_links_attributes: [ :url, :language ] }
+      { video_links_attributes: [ :id, :url, :language ] }
     )
   end
 

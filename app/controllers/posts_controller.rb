@@ -14,18 +14,19 @@ class PostsController < ApplicationController
                       twitter: {card: "summary_large_image"})
   end
 
-  def new
-  end
-
-  def edit
-  end
-
   def create
     if post.save
       create_post_pictures
       message(:notice, :saved)
     end
     respond_with post
+  end
+
+
+  def new
+  end
+
+  def edit
   end
 
   def update
@@ -60,4 +61,5 @@ class PostsController < ApplicationController
       post.pictures.create(image: image)
     end
   end
+
 end

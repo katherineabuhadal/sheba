@@ -21,7 +21,7 @@ class ContentController < PostsController
       :tag_list,
       :ingredient_tag_list,
       :category_tag_list,
-      { video_links_attributes: [ :url, :language ] }
+      { video_links_attributes: [ :id, :url, :language ] }
     )
   end
 end
