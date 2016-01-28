@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     description = options[:description] ||= "My name is Katherine, and I am on a journey to discover Yemeni cooking. Join me!"
     image       = options[:image] || ActionController::Base.helpers.asset_path("sheba-yemeni-food-logo.png")
     keywords    = options[:keywords] || %w[yemeni recipes cooking food arabic]
-    current_url = request.url
+    current_url = request.url.force_encoding("UTF-8")
 
     defaults = {
       site:        site_name,
