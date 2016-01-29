@@ -31,6 +31,7 @@ class PostsController < ApplicationController
 
   def update
     message(:notice, :updated) if post.update_attributes(post_params)
+    create_post_pictures
     respond_with post
   end
 
