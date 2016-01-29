@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :taggings
   has_many :tags, through: :taggings
+  has_many :all_tags, through: :taggings, class_name: "Tag", source: :tag
   has_many :video_links, as: :entity
 
   acts_as_taggable
@@ -25,6 +26,14 @@ class Post < ActiveRecord::Base
       wild_term = "%#{term}%"
       where(arel_table[:title].matches(wild_term).or(arel_table[:content].matches(wild_term)))
     end
+  end
+
+  def related_posts
+    Post.joins(:all_tags)
+      .where(tags: { id: self.tags })
+      .where.not(id: self.id)
+      .order("RANDOM()")
+      .limit(3)
   end
 
   def primary_image

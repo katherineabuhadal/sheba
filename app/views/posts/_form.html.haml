@@ -19,7 +19,7 @@
     = f.text_field :permalink
   .field
     - 1.times { f.object.video_links.build } unless f.object.video_links.count == 2
-    = f.fields_for :video_links do |ff|
+    = f.fields_for :video_links, f.object.video_links do |ff|
       = ff.label :url
       = ff.text_area :url
 
