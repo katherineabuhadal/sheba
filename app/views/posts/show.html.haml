@@ -31,8 +31,8 @@
       .video-container
         = raw video.url
 
-  %h2 Related Posts
-  = render "posts/related_posts", collection: post.related_posts
+  -# %h2 Related Posts
+  -# = render "posts/related_posts", collection: post.related_posts
 .div
   %h2 Comments
   = render "comments/form", post: post
