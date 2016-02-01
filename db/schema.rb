@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20160127212358) do
   end
 
   create_table "taggings", force: :cascade do |t|
-    t.integer  "tag_id",                    null: false
+    t.integer  "tag_id"
     t.integer  "taggable_id"
     t.string   "taggable_type"
     t.integer  "tagger_id"
@@ -69,14 +69,10 @@ ActiveRecord::Schema.define(version: 20160127212358) do
   add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
 
   create_table "tags", force: :cascade do |t|
-    t.string   "name",                       null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.string   "permalink"
-    t.integer  "taggings_count", default: 0
+    t.string  "name"
+    t.string  "permalink"
+    t.integer "taggings_count", default: 0
   end
-
-  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
