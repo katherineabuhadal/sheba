@@ -15,7 +15,7 @@
       |
       = link_to 'Edit', [:edit, post]
 
-%p= post.content
+%p= simple_format(raw post.content)
 
 %h4 Ingredients
 %p= simple_format(raw post.ingredients)
