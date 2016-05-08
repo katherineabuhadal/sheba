@@ -5,6 +5,10 @@
       = f.text_field :name, placeholder: "Name"
     .field
       = f.text_area :content, placeholder: "Comment here..."
+    .field
+      = f.label :humanizer_answer, comment.humanizer_question
+      = f.text_field :humanizer_answer
+      = f.hidden_field :humanizer_question_id
     .actions
       = f.submit
 

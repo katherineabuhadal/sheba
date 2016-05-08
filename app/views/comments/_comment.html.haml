@@ -16,6 +16,9 @@
       = form_for [comment, reply] do |f|
         = f.text_field :name, placeholder: "Name"
         = f.text_area :content, placeholder: "Reply"
+        = f.label :humanizer_answer, comment.humanizer_question
+        = f.text_field :humanizer_answer
+        = f.hidden_field :humanizer_question_id
         = f.submit "Submit"
         = link_to "Cancel", '#', class: 'cancel-button btn btn-link'
 

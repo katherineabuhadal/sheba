@@ -42,6 +42,8 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(
       :name,
       :content,
+      :humanizer_answer,
+      :humanizer_question_id,
     ).merge(parent: parent)
   end
 

@@ -27,6 +27,7 @@ gem 'aws-sdk', '~> 1'
 gem "binding_of_caller"
 gem 'meta-tags'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'humanizer'
 
 group :production do
   gem 'rails_12factor'

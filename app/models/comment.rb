@@ -1,8 +1,11 @@
 class Comment < ActiveRecord::Base
+  include Humanizer
+
   belongs_to :post
   belongs_to :user
   belongs_to :parent, class_name: "Comment"
   validates :post, :content, :name, presence: true
+  require_human_on :create
 
   class << self
     def parent_comments
