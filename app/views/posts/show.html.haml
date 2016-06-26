@@ -3,9 +3,9 @@
 .image-info
   %h1
     = post.title
-    -# .social-buttons
-    -#   = pinterest_link(options = { media: image_link(post), description: post.title })
-    -#   %span.facebook-wrapper= facebook_link(options = { url: polymorphic_url(post)} )
+    .social-buttons
+      = pinterest_link(options = { media: image_link(post), description: post.title })
+      %span.facebook-wrapper= facebook_link(options = { url: polymorphic_url(post)} )
 
   - if post.tags.present?
     .breathe= render "tags/tags", collection: post.tags
