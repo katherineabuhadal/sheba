@@ -17,7 +17,7 @@ module ApplicationHelper
 
   def image_link(post)
     return unless post.primary_image
-    request.protocol + request.host_with_port + post.primary_image.url
+    post.primary_image.url
   end
 
 end
