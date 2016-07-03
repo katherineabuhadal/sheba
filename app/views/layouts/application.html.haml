@@ -14,9 +14,18 @@
       = render :partial => 'shared/google_analytics'
 
   %body
+    #fb-root
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1459144461020057";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    %script{:async => "", :defer => "", :src => "//assets.pinterest.com/js/pinit.js"}
     = render 'shared/nav_menu'
     = render "flashes"
     .outer-container
       = yield
     = render 'shared/footer'
-    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
