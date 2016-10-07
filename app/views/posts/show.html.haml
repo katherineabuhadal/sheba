@@ -30,10 +30,10 @@
     .video-wrapper
       .video-container
         = raw video.url
-
-  -# %h2 Related Posts
-  -# = render "posts/related_posts", collection: post.related_posts
-.div
+.related-posts
+  %h2 Related Posts
+  = render "posts/related_posts", collection: post.related_posts
+.comments
   %h2 Comments
   = render "comments/form", post: post
   - post.comments.parent_comments.each do |comment|

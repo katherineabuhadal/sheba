@@ -44,6 +44,9 @@
             -# <a href="https://www.instagram.com/shebayemenifood/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
           .breathe.hidden-tablet
             = render "ads/display"
+          .breathe.hidden-tablet
+            - ActsAsTaggableOn::Tag.most_used(60).each do |tag|
+              %span.tag.tag-default= link_to tag.name, tag_path(tag.permalink)
 
       .content-wrapper
         = yield
