@@ -23,7 +23,7 @@
 %h4 How to make
 %p= simple_format(raw post.instructions)
 
-= render "ads/text"
+= render "ads/responsive"
 
 - if post.video_links.present?
   - post.video_links.each do |video|

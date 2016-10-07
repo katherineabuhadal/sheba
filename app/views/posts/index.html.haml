@@ -1,16 +1,10 @@
-.card-wrapper
-  - if posts.present?
-    = render "shared/logo"
-    .cards.small-cards
-      - posts.each_with_index do |post, index|
-        - if index == 5 || index == 8
-          .card
-            = render "ads/display"
-        = render "post", post: post
-    %center.breathe
-      = will_paginate posts
-  - else
-    %div
-      = render "shared/logo"
-      %div.flash-notice
-        No posts were found. Try changing the search criteria.
+- if posts.present?
+  .cards.small-cards
+    - posts.each_with_index do |post, index|
+      = render "post", post: post
+  %center.breathe
+    = will_paginate posts
+- else
+  %div.flash-notice
+    No posts were found. Try changing the search criteria.
+

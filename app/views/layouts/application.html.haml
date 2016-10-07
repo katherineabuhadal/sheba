@@ -27,5 +27,24 @@
     = render 'shared/nav_menu'
     = render "flashes"
     .outer-container
-      = yield
+      .logo-wrapper
+        = link_to((image_tag "sheba-yemeni-food-logo.png", class: 'site-logo', alt: "sheba-yemeni-food-logo"), root_path)
+        .filters
+          -# %p I'm Katherine and I make Yemeni and other recipes in English and Arabic. I'm American but I learned most of these recipes living in Yemen for 3 years.
+          .well.breathe.hidden-tablet
+            %h4 Sign up to receive email updates
+            %small Join over 1,000 other subscribers on my email list
+            .sidebar-email-sign-up
+              = render "shared/email_sign_up_form"
+          .well.breathe.hidden-tablet
+            %h4 Subscribe on Youtube
+            %script{:src => "https://apis.google.com/js/platform.js"}
+            .g-ytsubscribe{"data-channel" => "shebayemenifood", "data-count" => "default", "data-layout" => "full"}
+            -# %h4 Follow on Instagram
+            -# <a href="https://www.instagram.com/shebayemenifood/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+          .breathe.hidden-tablet
+            = render "ads/display"
+
+      .content-wrapper
+        = yield
     = render 'shared/footer'

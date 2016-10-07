@@ -1,25 +1,29 @@
 .second-footer-div
--# .third-footer-div
--# .footer-div
+.footer-div.visible-tablet
+  .footer-email-sign-up
+    %h3 Subscribe for email updates
+    = render "shared/email_sign_up_form"
+  = render "ads/responsive"
+
 .post-footer-div
 
 %footer.footer{:role => "contentinfo"}
-  .footer-logo
-    %i{class: "fa fa-sun-o"}
   .footer-links
     %ul
     %ul
       %li
-        %h3 Subscribe
-      %li
-        %script{:src => "https://apis.google.com/js/platform.js"}
-        .g-ytsubscribe{"data-channel" => "shebayemenifood", "data-count" => "default", "data-layout" => "default", "data-theme" => "dark"}
-      %li
-        <a href="https://www.instagram.com/shebayemenifood/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
-      %li
-        .fb-like{"data-action" => "like", "data-href" => "https://www.facebook.com/ShebaYemeniFood", "data-layout" => "button_count", "data-share" => "false", "data-show-faces" => "true", "data-width" => "300"}
-      %li
-        %a{"data-pin-do" => "buttonFollow", :href => "http://www.pinterest.com/shebayemenifood/"} Pinterest
+        = link_to 'https://www.youtube.com/user/ShebaYemeniFood', class: 'footer-social-link' do
+          = fa_icon 'youtube-play'
+          %span YouTube
+        = link_to 'https://www.instagram.com/shebayemenifood', class: 'footer-social-link' do
+          = fa_icon 'instagram'
+          %span Instagram
+        = link_to 'https://www.facebook.com/shebayemenifood', class: 'footer-social-link' do
+          = fa_icon 'facebook-square'
+          %span Facebook
+        = link_to 'https://www.pinterest.com/shebayemenifood', class: 'footer-social-link' do
+          = fa_icon 'pinterest'
+          %span Pinterest
   %hr/
   %p
     Images and content &copy; #{Date.today.year} Katherine Abu Hadal.

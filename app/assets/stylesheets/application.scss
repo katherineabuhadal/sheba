@@ -32,6 +32,10 @@
   padding-right: 5px;
 }
 
+.container {
+  @include outer-container;
+}
+
 body {
   margin: 0;
 }
@@ -64,7 +68,7 @@ body {
 }
 
 .breathe {
-  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .hidden {
@@ -128,6 +132,23 @@ body {
   height: auto;
 }
 
-.thumbnail-wrapper {
+.well {
+  background: $lighter-gray;
+  border-radius: $base-border-radius;
+  padding: 1em;
+}
+
+.hidden-tablet {
+  @include media($tablet) {
+    display: none;
+  }
+}
+
+.visible-tablet {
+  display: none;
+
+  @include media($tablet) {
+    display: block;
+  }
 }
 

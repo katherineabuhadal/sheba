@@ -20,4 +20,8 @@ module ApplicationHelper
     post.primary_image.url
   end
 
+  def fa_icon(name, options = {})
+    content_tag(:i, '', { class: "fa fa-#{name}" }.merge!(options))
+  end
+
 end

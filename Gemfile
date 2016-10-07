@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.3.1'
 gem 'rails', '4.2.3'
 gem 'pg'
 gem 'mysql2'
@@ -19,7 +20,7 @@ gem 'neat'
 gem "paperclip", "~> 4.3"
 gem "exception_notification", "~> 4.0.1"
 gem 'responders', '~> 2.0'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 4.6.2'
 gem 'will_paginate', '~> 3.0.6'
 gem 'high_voltage', '~> 2.4.0'
 gem 'devise'

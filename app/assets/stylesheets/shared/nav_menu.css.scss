@@ -52,7 +52,9 @@ header.navigation {
     display: block;
     float: right;
     line-height: $navigation-height;
+    line-height: 34px;
     margin: 0;
+    margin-bottom: 16px;
     padding-right: 1em;
     text-decoration: none;
     text-transform: uppercase;
@@ -64,6 +66,7 @@ header.navigation {
     &:focus,
     &:hover {
       color: $navigation-color-hover;
+      background: none;
     }
   }
 
@@ -71,7 +74,7 @@ header.navigation {
 
   nav {
     float: none;
-    min-height: $navigation-height;
+    // min-height: $navigation-height;
     z-index: 9999999;
 
     @include media ($horizontal-bar-mode) {
@@ -279,14 +282,14 @@ header.navigation {
     $search-bar-border-color: $base-border-color;
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10%);
+    width: 66%;
 
-    float: left;
-    padding: 0.85em 0.85em 0.7em 0.6em;
-    width: 60%;
+    @include media($horizontal-bar-mode) {
+      float: right;
+    }
+
 
     form {
-      position: relative;
-
       input[type=search] {
         @include box-sizing(border-box);
         background: $navigation-search-background;
@@ -315,7 +318,7 @@ header.navigation {
         right: 0.3em;
         top: 0.3em;
 
-        img {
+        i {
           height: 12px;
           opacity: 0.7;
           padding: 1px;

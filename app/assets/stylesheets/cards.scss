@@ -4,24 +4,56 @@
   @include justify-content(space-between);
 }
 
-.card-wrapper {
-  @include span-columns(12);
+.content-wrapper {
+  padding: 0 1em 1.5em 1em;
+  @include span-columns(8);
+  @include media($tablet) {
+    @include span-columns(8);
+  }
 }
 
 .logo-wrapper {
-  @include flex-basis(7.5em);
-  @include flex-grow(1);
+  padding: 0 1em 1.5em 1em;
+  @include span-columns(4);
   @include transition (all 0.2s ease-in-out);
-  position: relative;
+
+  @include media($tablet) {
+    @include span-columns(8);
+  }
 }
 
-.primary-cards {
-  .card {
-    @include flex-basis(28em);
+.site-logo {
+  @include media($tablet) {
+    width: 20%;
+    float: left;
+  }
 
-    .card-image {
-      max-height: 350px;
-    }
+  @include media($mobile) {
+    width: 30%;
+    float: none;
+  }
+}
+
+.filters {
+  @include media($tablet) {
+    width: 60%;
+    float: right;
+  }
+
+  @include media($mobile) {
+    float: none;
+  }
+
+  .sidebar-email-sign-up {
+    margin-top: 15px;
+  }
+}
+
+.primary-card {
+  @include flex-basis(28em);
+
+  .card-image {
+    max-height: 350px;
   }
 }
 
