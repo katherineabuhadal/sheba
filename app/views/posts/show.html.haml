@@ -8,7 +8,7 @@
       %span.facebook-wrapper= facebook_link(options = { url: polymorphic_url(post)} )
 
   - if post.tags.present?
-    .breathe= render "tags/tags", collection: post.tags
+    .breathe= render "tags/tags", collection: post.all_tags.distinct
   %div
     = post.date
     - if current_user
@@ -33,6 +33,7 @@
 .related-posts
   %h2 Related Posts
   = render "posts/related_posts", collection: post.related_posts
+
 .comments
   %h2 Comments
   = render "comments/form", post: post

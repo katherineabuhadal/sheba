@@ -30,8 +30,8 @@ class Post < ActiveRecord::Base
 
   def related_posts
     Post.select('posts.*, RANDOM() as random_posts').joins(:all_tags)
-      .uniq
-      .where(tags: { id: self.tags })
+      .distinct
+      .where(tags: { id: self.all_tags })
       .where.not(id: self.id)
       .order("random_posts desc")
       .limit(3)
