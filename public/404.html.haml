@@ -8,8 +8,6 @@
     %meta{charset: "utf-8"}
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
 
-    = javascript_tag do
-      = yield(:javascripts)
     - if Rails.env == 'production'
       = render :partial => 'shared/google_analytics'
 
@@ -29,6 +27,8 @@
     .outer-container
       = render 'shared/sidebar'
       .content-wrapper
-        = yield
+        .dialog
+          %div
+            %h1 The page you were looking for doesn't exist.
+            %p You may have mistyped the address or the page may have moved.
     = render 'shared/footer'
-
