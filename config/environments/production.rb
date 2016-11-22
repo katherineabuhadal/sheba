@@ -99,7 +99,7 @@ Rails.application.configure do
   }
 
   Rails.application.config.middleware.use ExceptionNotification::Rack,
-    :ignore_exceptions => ['ActionController::InvalidAuthenticityToken'],
+    :ignore_exceptions => ['ActionController::InvalidAuthenticityToken', 'ActionController::BadRequest'],
     :email => {
     :email_prefix => "[ERROR] ",
     :sender_address => %{"notifier" <notifier@shebayemenifood.com>},
