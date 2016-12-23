@@ -1,0 +1,46 @@
+@mixin flash($color) {
+  background-color: $color;
+  color: darken($color, 55%);
+  display: block;
+  padding: $base-spacing / 2;
+  // text-align: center;
+
+  a {
+    color: darken($color, 70%);
+    text-decoration: underline;
+
+    &:focus,
+    &:hover {
+      color: darken($color, 90%);
+    }
+  }
+}
+
+.alert {
+  margin-bottom: $base-spacing / 2;
+}
+
+.flash-alert {
+  @include flash($light-warning-color);
+}
+
+.flash-error {
+  @include flash($light-danger-color);
+}
+
+.flash-notice {
+  @include flash($light-notice-color);
+}
+
+.flash-success {
+  @include flash($light-success-color);
+}
+
+.flash {
+  width: 100%;
+  height: 60px;
+  position:fixed;
+  font-weight: bold;
+  padding: 1em;
+  z-index: 9999999;
+}

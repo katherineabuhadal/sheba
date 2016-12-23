@@ -1,5 +1,5 @@
 #{$all-button-inputs},
-button {
+button, .btn {
   @include appearance(none);
   -webkit-font-smoothing: antialiased;
   background-color: $action-color;
@@ -29,3 +29,15 @@ button {
     opacity: 0.5;
   }
 }
+
+.btn-link {
+  background: none;
+  color: $action-color;
+
+  &:hover,
+  &:focus {
+    background: none;
+    color: darken($action-color, 15%);
+  }
+}
+

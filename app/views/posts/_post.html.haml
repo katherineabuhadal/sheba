@@ -1,0 +1,15 @@
+.card
+  = link_to post do
+    .card-image
+      = image_tag post.primary_image if post
+    .card-header
+      = post.title
+    .card-copy
+      %p= raw post.content.truncate(85, separator: " ") if post.content
+  .stats-wrapper
+    %span.date= post.date
+    .stats
+      %ul
+        -# %li= pinterest_link(options = { media: image_link(post), description: post.title, url: polymorphic_url(post) })
+        -# %li= facebook_link(options = { url: polymorphic_url(post)} )
+

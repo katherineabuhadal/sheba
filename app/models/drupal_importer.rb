@@ -6,24 +6,27 @@ class DrupalImporter
   end
 
   def run
-    @node = initialize_post
+    @node = initialize_recipe
   end
 
-  def initialize_post
-    @post = Post.create(
+  def initialize_recipe
+    @recipe = Recipe.create(
       title: title,
       content: content,
       created_at: created_at,
       updated_at: updated_at,
       ingredients: ingredients,
+      permalink: permalink,
+      published: true,
     )
 
     if image_path
-      picture = @post.pictures.create(name: "xyz")
+      picture = @recipe.pictures.create(name: "xyz")
       picture.image = File.new(image_path)
       picture.save
     end
     find_comments
+    create_taggings
     create_video
   end
 
@@ -64,11 +67,11 @@ class DrupalImporter
   def ingredients
     return unless @ingredients
     @ingredients.field_ingredients_value
-      .gsub(/<script.*?script>/m, '')
-      .gsub(/<style.*?style>/m, '')
-      .gsub(/<.*?>/m, '')
-      .gsub(/&.*?;/, '')
-      .gsub(/[\r\n]+/, "\n")
+  end
+
+  def permalink
+    url_alias = Drupal::UrlAlias.where(source: "node/#{@node.id}").first.alias
+    url_alias.gsub("content/", "")
   end
 
   def parent_comments
@@ -81,7 +84,7 @@ class DrupalImporter
 
   def create_comment(comment, parent_comment = nil)
     Comment.create(
-      post_id: @post.id,
+      post_id: @recipe.id,
       content: (comment_subject(comment).comment_body_value if comment_subject(comment)),
       title: comment.subject,
       name: comment.name,
@@ -101,13 +104,23 @@ class DrupalImporter
     end
   end
 
+  def create_taggings
+    taggings = Drupal::Tagging.where(nid: @node.id)
+    taggings.each do |tagging|
+      drupal_tag = Drupal::Tag.find_by(tid: tagging.tid)
+      tag = ::ActsAsTaggableOn::Tag.find_or_create_by(name: drupal_tag.name.downcase)
+      @recipe.tag_list.add(tag.name)
+      @recipe.save
+    end
+  end
+
   def video
     Drupal::Video.where(entity_id: @node.id).first
   end
 
   def create_video
     return unless video
-    VideoLink.create(english_link: video.field_video_value, post: @post)
+    VideoLink.create(english_link: video.field_video_value, post: @recipe)
   end
 
 end

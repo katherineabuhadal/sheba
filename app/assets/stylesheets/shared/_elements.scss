@@ -1,0 +1,40 @@
+.label {
+  padding: .1em .4em .125em;
+  display: inline;
+  font-size: 70%;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+.label-primary {
+  color: $primary-color;
+  background: $light-primary-color;
+}
+
+.tag {
+  padding: .2em .8em .3em;
+  display: inline;
+  font-size: 80%;
+  font-weight: bold;
+  line-height: 2.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: $base-border-radius;
+}
+
+.tag-default {
+  background-color: $light-warning-color;
+  a {
+    color: $warning-color;
+
+    &:hover {
+      color: $darker-warning-color;
+    }
+  }
+}
+

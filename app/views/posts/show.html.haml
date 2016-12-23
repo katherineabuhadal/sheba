@@ -1,22 +1,53 @@
 .post-image-wrapper
   = image_tag post.primary_image
-  .social-buttons-overlay
-    = pinterest_link(options = { media: request.protocol + request.host_with_port + post.primary_image.url,
-      description: post.title })
-
 .image-info
-  %h1= post.title
-  %span
+  %h1
+    = post.title
+    .social-buttons
+      = pinterest_link(options = { media: image_link(post), description: post.title })
+      %span.facebook-wrapper= facebook_link(options = { url: polymorphic_url(post)} )
+
+  - if post.tags.present?
+    .breathe= render "tags/tags", collection: post.all_tags.distinct
+  %div
     = post.date
-    |
-    = link_to 'Edit', edit_post_path(post)
-.inner-container
-  %p= post.content
+    - if current_user
+      |
+      = link_to 'Edit', [:edit, post]
 
-  = raw post.video_link.english_link if post.video_link
+%p= simple_format(raw post.content)
 
-%h2 Comments
-- post.comments.parent_comments.each do |comment|
-  = render comment
-  %div{class: "child-comment"}= render comment.children
+%h4 Ingredients
+%p= simple_format(raw post.ingredients)
 
+%h4 How to make
+%p= simple_format(raw post.instructions)
+
+= render "ads/responsive"
+
+- if post.video_links.present?
+  - post.video_links.each do |video|
+    .video-wrapper
+      .video-container
+        = raw video.url
+.related-posts
+  %h2 Related Posts
+  = render "posts/related_posts", collection: post.related_posts
+
+.comments
+  %h2 Comments
+  = render "comments/form", post: post
+  - post.comments.parent_comments.each do |comment|
+    = render comment
+    %div{class: "child-comment"}= render comment.children
+:javascript
+  $(function() {
+    $('.reply-button').click(function(event) {
+      event.preventDefault();
+      $(this).parent().find('.reply-form').show();
+    });
+    $('.cancel-button').click(function(event) {
+      event.preventDefault();
+      $(this).parent().parent().hide();
+    });
+  });

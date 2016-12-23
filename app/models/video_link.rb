@@ -1,4 +1,3 @@
 class VideoLink < ActiveRecord::Base
-  belongs_to :post
-  validates_presence_of :post
+  belongs_to :entity, polymorphic: true
 end

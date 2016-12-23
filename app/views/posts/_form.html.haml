@@ -1,9 +1,5 @@
 = form_for post, html: { class: 'form-horizontal', multipart: true }  do |f|
-  - if post.errors.any?
-    #error_explanation
-      %ul
-        - post.errors.full_messages.each do |message|
-          %li= message
+  = render "error_messages", target: post
   .field
     = f.label :title
     = f.text_field :title
@@ -11,10 +7,33 @@
     = f.label :content
     = f.text_area :content
   .field
+    = f.label :ingredients
+    = f.text_area :ingredients, class: "tall-text-area"
+  .field
+    = f.label :instructions
+    = f.text_area :instructions, class: "tall-text-area"
+  .field
     = file_field_tag "images[]", type: :file, multiple: true
   .field
     = f.label :permalink
     = f.text_field :permalink
+  .field
+    - 1.times { f.object.video_links.build } unless f.object.video_links.count == 2
+    = f.fields_for :video_links, f.object.video_links do |ff|
+      = ff.label :url
+      = ff.text_area :url
+
+      = ff.label :language
+      = ff.select :language, ["English", "Arabic"]
+  .field
+    = f.label :tag_list
+    = f.text_field :tag_list, value: post.tag_list.join(", ")
+  .field
+    = f.label :ingredient_tag_list
+    = f.text_field :ingredient_tag_list, value: post.ingredient_tag_list.join(", ")
+  .field
+    = f.label :category_tag_list
+    = f.text_field :category_tag_list, value: post.category_tag_list.join(", ")
   .actions
     = f.submit
 

@@ -1,28 +1,10 @@
-%p#notice= notice
-.card-wrapper
-  .cards
-    .card.primary-card
-      .card-image
-        = image_tag posts.first.primary_image
-        -# = image_tag "sheba-yemeni-food-logo.png", class: "logo"
-      .card-header
-        = posts.first.title
-      .card-copy
-        %p= raw posts.first.content
-        = posts.first.date
-        = link_to 'Show', posts.first
-        = link_to 'Edit', [:edit, posts.first]
-  .cards
-    - posts[1..6].each do |post|
-      = link_to post do
-        .card.small-card
-          .card-image
-            = image_tag post.primary_image
-          .card-header
-            = post.title
-          .card-copy
-            %p= raw post.content.truncate(100, separator: " ") if post.content
-            = post.date
-            = link_to 'Show', post
-            = link_to 'Edit', [:edit, post]
-= link_to 'New Post', [:new, :post]
+- if posts.present?
+  .cards.small-cards
+    - posts.each_with_index do |post, index|
+      = render "post", post: post
+  %center.breathe
+    = will_paginate posts
+- else
+  %div.flash-notice
+    No posts were found. Try changing the search criteria.
+

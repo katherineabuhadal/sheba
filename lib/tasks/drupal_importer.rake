@@ -1,12 +1,16 @@
 namespace :import do
   desc "Clear DB"
   task :clear_db => :environment do
-    Post.destroy_all
+    Recipe.destroy_all
     Comment.destroy_all
+    Tagging.destroy_all
+    Tag.destroy_all
     ActiveRecord::Base.connection.execute("TRUNCATE #{Post.quoted_table_name}")
     ActiveRecord::Base.connection.execute("TRUNCATE #{Comment.quoted_table_name}")
+    ActiveRecord::Base.connection.execute("TRUNCATE #{Tag.quoted_table_name}")
+    ActiveRecord::Base.connection.execute("TRUNCATE #{Tagging.quoted_table_name}")
   end
-  desc "Import posts from drupal db"
+  desc "Import recipes from drupal db"
   task :posts => :environment do
     module Drupal
       extend ActiveSupport::Concern
@@ -23,7 +27,7 @@ namespace :import do
       class Comment < ActiveRecord::Base
         establish_connection 'sheba_drupal_dump'
         self.table_name = "comment"
-        belongs_to :post, foreign_key: 'Creator', class_name: "User"
+        belongs_to :recipe, foreign_key: 'Creator', class_name: "User"
       end
       class CommentBody < ActiveRecord::Base
         establish_connection 'sheba_drupal_dump'
@@ -49,6 +53,22 @@ namespace :import do
       class Video < ActiveRecord::Base
         establish_connection 'sheba_drupal_dump'
         self.table_name = "field_data_field_video"
+      end
+      class UrlAlias < ActiveRecord::Base
+        establish_connection 'sheba_drupal_dump'
+        self.table_name = "url_alias"
+      end
+      class Tag < ActiveRecord::Base
+        establish_connection 'sheba_drupal_dump'
+        self.table_name = "taxonomy_term_data"
+      end
+      class Tagging < ActiveRecord::Base
+        establish_connection 'sheba_drupal_dump'
+        self.table_name = "taxonomy_index"
+      end
+      class Category < ActiveRecord::Base
+        establish_connection 'sheba_drupal_dump'
+        self.table_name = "taxonomy_vocabulary"
       end
 
     end

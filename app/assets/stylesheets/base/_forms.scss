@@ -52,7 +52,11 @@ textarea {
 
 textarea {
   resize: vertical;
-  min-height: 200px;
+  min-height: 70px;
+}
+
+.tall-text-area {
+  min-height: 140px;
 }
 
 input[type="search"] {
@@ -75,3 +79,11 @@ select {
   max-width: 100%;
   width: auto;
 }
+
+
+.field {
+  input, textarea {
+    background-color: white;
+  }
+}
+

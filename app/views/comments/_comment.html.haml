@@ -1,7 +1,24 @@
 .comment
   .comment-image
-    %i{alt: "sheba-guest-logo", class: "fa fa-user"}
+    %i{alt: "sheba-guest-logo", class: "fa fa-comment"}
   .comment-content
-    %h1= comment.name
+    %h1
+      - if comment.user
+        = comment.user.name
+        .label.label-primary shebayemenifood
+      - else
+        = comment.name
     %p= raw comment.content
-    %p.comment-detail= comment.date
+    %span.comment-detail= comment.date
+    - if comment.is_a_parent?
+      = link_to "Reply", '#', class: 'reply-button pull-right'
+    %div.reply-form.hidden{ id: "comment_#{comment.id}"}
+      = form_for [comment, reply] do |f|
+        = f.text_field :name, placeholder: "Name"
+        = f.text_area :content, placeholder: "Reply"
+        = f.label :humanizer_answer, comment.humanizer_question
+        = f.text_field :humanizer_answer
+        = f.hidden_field :humanizer_question_id
+        = f.submit "Submit"
+        = link_to "Cancel", '#', class: 'cancel-button btn btn-link'
+

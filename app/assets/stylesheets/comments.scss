@@ -1,9 +1,9 @@
 .comment {
   $comment-gutter: 1.4em;
-  $comment-image-padding: 0.3em;
+  $comment-image-padding: 0.35em;
   // $comment-image-width: 5em;
   $comment-color: $base-font-color;
-  $comment-background: lighten($action-color, 15%);
+  $comment-background: $warning-color;
   $comment-detail-color: transparentize($comment-color, 0.5);
   $comment-image-vert-alignment: top;
 
@@ -27,7 +27,7 @@
       color: white;
       border-radius: $base-border-radius;
       display: block;
-      font-size: 3em;
+      font-size: 2.75em;
       max-width: none;
       padding: $comment-image-padding;
       // width: $comment-image-width;
@@ -52,7 +52,16 @@
       margin-bottom: 0.5em;
     }
 
-    p.comment-detail {
+    .reply-button {
+      font-size: 0.65em;
+      background: $light-success-color;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: $base-border-radius;
+    }
+
+    span.comment-detail {
       color: $comment-detail-color;
       font-size: 0.9em;
       font-style: italic;
@@ -64,3 +73,6 @@
   margin-left: 82px;
 }
 
+.reply-form {
+  margin-top: 1em;
+}

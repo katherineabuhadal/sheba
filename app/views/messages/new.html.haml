@@ -1,0 +1,17 @@
+%h1 Contact
+
+%p Hello there! Thanks for your interest in contacting me. I very much appreciate that.
+%p I have the intention of replying to every message but even the best laid plans of mice and men often go awry.
+%p Hope we get to connect electronically or in person; in this world or maybe in the next...
+
+%fieldset
+  = form_for message do |f|
+    = render "error_messages", target: message
+    .field
+      = f.text_field :name, placeholder: "Name"
+    .field
+      = f.email_field :email, placeholder: "Email"
+    .field
+      = f.text_area :content, placeholder: "Message"
+
+    = f.submit "Send"

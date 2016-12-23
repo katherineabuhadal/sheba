@@ -1,13 +1,10 @@
 header.navigation {
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $action-color: #477DCA !default;
-  $dark-gray: #333 !default;
+  $action-color: $primary-color;
   $large-screen: em(860) !default;
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;
   $navigation-color: transparentize(white, 0.3);
-  $navigation-color-hover: white;
+  $navigation-color-hover: $success-color;
   $navigation-height: 60px;
   $navigation-nav-button-background: $action-color;
   $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
@@ -20,15 +17,19 @@ header.navigation {
   $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
-  border-bottom: 1px solid darken($navigation-background, 10);
+  border-bottom: 3px solid white;
   min-height: $navigation-height;
   width: 100%;
-  z-index: 999;
+  z-index: 1;
+  opacity: 0.95;
+  position: fixed;
 
   .navigation-wrapper {
     @include clearfix;
     @include outer-container;
     position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
     z-index: 9999;
   }
 
@@ -51,7 +52,9 @@ header.navigation {
     display: block;
     float: right;
     line-height: $navigation-height;
+    line-height: 34px;
     margin: 0;
+    margin-bottom: 16px;
     padding-right: 1em;
     text-decoration: none;
     text-transform: uppercase;
@@ -63,6 +66,7 @@ header.navigation {
     &:focus,
     &:hover {
       color: $navigation-color-hover;
+      background: none;
     }
   }
 
@@ -70,7 +74,7 @@ header.navigation {
 
   nav {
     float: none;
-    min-height: $navigation-height;
+    // min-height: $navigation-height;
     z-index: 9999999;
 
     @include media ($horizontal-bar-mode) {
@@ -110,6 +114,8 @@ header.navigation {
     text-align: right;
     width: 100%;
     z-index: 9999;
+    text-transform: uppercase;
+    font-weight: 600;
 
     @include media ($horizontal-bar-mode) {
       background: transparent;
@@ -276,14 +282,14 @@ header.navigation {
     $search-bar-border-color: $base-border-color;
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10%);
+    width: 66%;
 
-    float: left;
-    padding: 0.85em 0.85em 0.7em 0.6em;
-    width: 60%;
+    @include media($horizontal-bar-mode) {
+      float: right;
+    }
+
 
     form {
-      position: relative;
-
       input[type=search] {
         @include box-sizing(border-box);
         background: $navigation-search-background;
@@ -312,7 +318,7 @@ header.navigation {
         right: 0.3em;
         top: 0.3em;
 
-        img {
+        i {
           height: 12px;
           opacity: 0.7;
           padding: 1px;
