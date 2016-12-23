@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'posts#index'
+  mount Spree::Core::Engine, :at => '/store'
+          root to: 'posts#index'
 
   resources :recipes, only: [:new, :show, :create, :update, :edit] do
     resources :comments, only: [:new, :create]

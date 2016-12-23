@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.3.1'
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.5'
 gem 'pg'
 gem 'mysql2'
 gem 'sass-rails', '~> 5.0'
@@ -21,7 +21,7 @@ gem "paperclip", "~> 4.3"
 gem "exception_notification", "~> 4.0.1"
 gem 'responders', '~> 2.0'
 gem 'font-awesome-sass', '~> 4.6.2'
-gem 'will_paginate', '~> 3.0.6'
+# gem 'will_paginate', '~> 3.1.5'
 gem 'high_voltage', '~> 2.4.0'
 gem 'devise'
 gem 'aws-sdk', '~> 1'
@@ -29,6 +29,8 @@ gem "binding_of_caller"
 gem 'meta-tags'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'humanizer'
+gem 'solidus'
+gem 'solidus_auth_devise'
 
 group :production do
   gem 'rails_12factor'
