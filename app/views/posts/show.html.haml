@@ -36,7 +36,6 @@
 
 .comments
   %h2 Comments
-  = render "comments/form", post: post
   - post.comments.parent_comments.each do |comment|
     = render comment
     %div{class: "child-comment"}= render comment.children
