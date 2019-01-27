@@ -1,0 +1,5103 @@
+@charset "UTF-8";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+@font-face {
+  font-family: 'Titillium';
+  src: url("titillium-regular-webfont.eot");
+  src: url("titillium-regular-webfont.eot?#iefix") format("embedded-opentype"), url("titillium-regular-webfont.svg#titillium-regular-webfont") format("svg"), url(/assets/titillium-regular-webfont-880a6de30ab0ed1ff830075b22ca25e7d490309d50886a2a2eba39ec7e288945.woff2) format("woff2"), url(/assets/titillium-regular-webfont-b856183ce8a6faa63df684b43fd40a7bea22779a10745758fb9e2f1041dfab44.woff) format("woff"), url(/assets/titillium-regular-webfont-053973b384b8666f706615508e91a8c0fcde00f9e7a3dd73ce796a75ae30a73f.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Titillium';
+  src: url("titillium-regularitalic-webfont.eot");
+  src: url("titillium-regularitalic-webfont.eot?#iefix") format("embedded-opentype"), url("titillium-regularitalic-webfont.svg#titillium-regularitalic-webfont") format("svg"), url(/assets/titillium-regularitalic-webfont-b320c83aa58434e36b542a5bb439ec7f93dc9efaceabbfe6e96ffc330af33987.woff2) format("woff2"), url(/assets/titillium-regularitalic-webfont-55be4ad77a4bfd6272c9f9d8d36c9701aa35645ba082110b9d359ec8b660047f.woff) format("woff"), url(/assets/titillium-regularitalic-webfont-428ae365925ee997da92c9cc10810596681b5c9a1bf8a47336e01c4d89f85c22.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Titillium';
+  src: url("titillium-light-webfont.eot");
+  src: url("titillium-light-webfont.eot?#iefix") format("embedded-opentype"), url("titillium-light-webfont.svg#titillium-light-webfont") format("svg"), url(/assets/titillium-light-webfont-fc02cd5c9c5bfbd1cacfa6b24fbf3093b17f30b4e1b63bd9bd99884611eaeb52.woff2) format("woff2"), url(/assets/titillium-light-webfont-815ee19e4658986665360cd691c84c542df3f775ce6d5a29b9d0644bed56c845.woff) format("woff"), url(/assets/titillium-light-webfont-c3b19c7cabd4968b21c68c5e813f6a08a80532ad6b70bfda03594637734ad075.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Titillium';
+  src: url("titillium-lightitalic-webfont.eot");
+  src: url("titillium-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("titillium-lightitalic-webfont.svg#titillium-lightitalic-webfont") format("svg"), url(/assets/titillium-lightitalic-webfont-e33bc73a5d440a10748a4abf64a2773a1b065eb417acdf26e85a9bc8407d8fb6.woff2) format("woff2"), url(/assets/titillium-lightitalic-webfont-6132953e4f894f72b392eb04bed2eec12c6396cba7890969d2f5bb19965ffa3a.woff) format("woff"), url(/assets/titillium-lightitalic-webfont-9f35530aa72db2202b2699a8f41e53710e479215b2ed2d3eae9b9a41fda87842.ttf) format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Titillium';
+  src: url("titillium-thin-webfont.eot");
+  src: url("titillium-thin-webfont.eot?#iefix") format("embedded-opentype"), url("titillium-thin-webfont.svg#titillium-thin-webfont") format("svg"), url(/assets/titillium-thin-webfont-5f42b10405887714c8893d4ae9f9e6cd6bc6b4c169e05b25d96c8f3759ba9829.woff2) format("woff2"), url(/assets/titillium-thin-webfont-2176aaec1b17b6314fe616013fcf69f59085f64a4dbb4335cab2c49dc5fe979b.woff) format("woff"), url(/assets/titillium-thin-webfont-a64aefa78e994b7daa3d22a440d04eba252bdf0712bfb00df891f2a20c4a812c.ttf) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Titillium';
+  src: url("titillium-thinitalic-webfont.eot");
+  src: url("titillium-thinitalic-webfont.eot?#iefix") format("embedded-opentype"), url("titillium-thinitalic-webfont.svg#titillium-thinitalic-webfont") format("svg"), url(/assets/titillium-thinitalic-webfont-19ea087ea03eefab8681f225494cbc16b7b81b52c661b8a667bf8be73133bcf1.woff2) format("woff2"), url(/assets/titillium-thinitalic-webfont-bcc7f7c63fccb4eac10e1b0221e27e6c47bfed00756b88a3778d14dd36fe6672.woff) format("woff"), url(/assets/titillium-thinitalic-webfont-b6b9ec530d6aed2974174afd06db294a0f0b3fa96c18b3c49e3825d64a2574fd.ttf) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Titillium';
+  src: url("titillium-bold-webfont.eot");
+  src: url("titillium-bold-webfont.eot?#iefix") format("embedded-opentype"), url("titillium-bold-webfont.svg#titillium-bold-webfont") format("svg"), url(/assets/titillium-bold-webfont-9de4fe28d2ee5ea0101d24ab899345be097ecc0ffdeb9d96fe0b6fbe77fa7a8c.woff2) format("woff2"), url(/assets/titillium-bold-webfont-071164f4be4bb7d51e1f3306528db2acc409f53233b160c86bf137c20817fc8a.woff) format("woff"), url(/assets/titillium-bold-webfont-a516205a665cabdf2757a8ccf3a00b232fac5d9c38a35b1c7cb965f3eacd4684.ttf) format("truetype");
+  font-weight: 600;
+  font-style: bold;
+}
+/* line 1, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_buttons.scss */
+button, input[type="button"], input[type="reset"], input[type="submit"],
+button, .btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  background-color: #03CEA4;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Titillium";
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+/* line 21, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_buttons.scss */
+button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
+button:hover,
+button:focus, .btn:hover, .btn:focus {
+  background-color: #028368;
+  color: #fff;
+}
+/* line 27, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_buttons.scss */
+button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
+button:disabled, .btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* line 33, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_buttons.scss */
+.btn-link {
+  background: none;
+  color: #03CEA4;
+}
+/* line 37, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_buttons.scss */
+.btn-link:hover, .btn-link:focus {
+  background: none;
+  color: #028368;
+}
+
+/* line 1, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+fieldset {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  margin: 0 0 0.75em;
+  padding: 1.5em;
+}
+
+/* line 8, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+input,
+label,
+select {
+  display: block;
+  font-family: "Titillium";
+  font-size: 1em;
+}
+
+/* line 16, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+label {
+  font-weight: 600;
+  margin-bottom: 0.375em;
+}
+/* line 20, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+label.required::after {
+  content: "*";
+}
+/* line 24, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+label abbr {
+  display: none;
+}
+
+/* line 29, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
+select[multiple=multiple],
+textarea {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-family: "Titillium";
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  transition: border-color;
+  width: 100%;
+}
+/* line 43, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
+select[multiple=multiple]:hover,
+textarea:hover {
+  border-color: #c4c4c4;
+}
+/* line 47, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
+select[multiple=multiple]:focus,
+textarea:focus {
+  border-color: #03CEA4;
+  outline: none;
+}
+
+/* line 53, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+/* line 58, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+.tall-text-area {
+  min-height: 140px;
+}
+
+/* line 62, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 66, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+/* line 72, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+input[type="file"] {
+  padding-bottom: 0.75em;
+  width: 100%;
+}
+
+/* line 77, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto;
+}
+
+/* line 85, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_forms.scss */
+.field input, .field textarea {
+  background-color: white;
+}
+
+/* line 1, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_lists.scss */
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 20, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_lists.scss */
+dl {
+  margin-bottom: 0.75em;
+}
+/* line 23, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_lists.scss */
+dl dt {
+  font-weight: bold;
+  margin-top: 0.75em;
+}
+/* line 28, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_lists.scss */
+dl dd {
+  margin: 0;
+}
+
+/* line 1, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_tables.scss */
+table {
+  -webkit-font-feature-settings: "kern", "liga", "tnum";
+  -moz-font-feature-settings: "kern", "liga", "tnum";
+  -ms-font-feature-settings: "kern", "liga", "tnum";
+  font-feature-settings: "kern", "liga", "tnum";
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 9, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_tables.scss */
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: 600;
+  padding: 0.75em 0;
+  text-align: left;
+}
+
+/* line 16, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_tables.scss */
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.75em 0;
+}
+
+/* line 21, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_tables.scss */
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+/* line 1, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_typography.scss */
+body {
+  -webkit-font-feature-settings: "kern", "liga", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "pnum";
+  font-feature-settings: "kern", "liga", "pnum";
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  font-family: "Titillium";
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* line 10, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Titillium";
+  line-height: 1.2;
+  margin: 0 0 0.75em;
+}
+
+/* line 21, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_typography.scss */
+p {
+  margin: 0 0 0.75em;
+}
+
+/* line 25, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_typography.scss */
+a {
+  color: #03CEA4;
+  text-decoration: none;
+  transition: color 0.1s linear;
+}
+/* line 30, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_typography.scss */
+a:active, a:focus, a:hover {
+  color: #028368;
+}
+/* line 36, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_typography.scss */
+a:active, a:focus {
+  outline: none;
+}
+
+/* line 42, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_typography.scss */
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+
+/* line 50, /Users/kabuhadal/development/sheba/app/assets/stylesheets/base/_typography.scss */
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* line 4, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/*!
+ *  Font Awesome 4.6.2 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("/assets/font-awesome/fontawesome-webfont-a280856e20cc0af53390b729ca0ac3edbf8fc889a828a379c5d634c91e80c808.eot?v=4.6.2");
+  src: url("/assets/font-awesome/fontawesome-webfont-a280856e20cc0af53390b729ca0ac3edbf8fc889a828a379c5d634c91e80c808.eot?v=4.6.2#iefix") format("embedded-opentype"), url("/assets/font-awesome/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2") format("woff2"), url("/assets/font-awesome/fontawesome-webfont-35fa8302dd7d3d191ebb7acac543efcfa2b85a0da573b3ab45cc122ffcc45ce5.woff?v=4.6.2") format("woff"), url("/assets/font-awesome/fontawesome-webfont-8630313bee77f64206067ed80eb6a7c721b0bbfc91c94210966969d4dcc43ba7.ttf?v=4.6.2") format("truetype"), url("/assets/font-awesome/fontawesome-webfont-6b0adce775f4d57ac800f23b05af72ced748ae51ba67a65b67b7316f1ed331b3.svg?v=4.6.2#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 4, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_core.scss */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* makes the font 33% larger relative to the icon container */
+/* line 5, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_larger.scss */
+.fa-lg {
+  font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+/* line 10, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_larger.scss */
+.fa-2x {
+  font-size: 2em;
+}
+
+/* line 11, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_larger.scss */
+.fa-3x {
+  font-size: 3em;
+}
+
+/* line 12, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_larger.scss */
+.fa-4x {
+  font-size: 4em;
+}
+
+/* line 13, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_larger.scss */
+.fa-5x {
+  font-size: 5em;
+}
+
+/* line 3, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_fixed-width.scss */
+.fa-fw {
+  width: 1.2857142857em;
+  text-align: center;
+}
+
+/* line 4, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_list.scss */
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.1428571429em;
+  list-style-type: none;
+}
+/* line 8, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_list.scss */
+.fa-ul > li {
+  position: relative;
+}
+
+/* line 10, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_list.scss */
+.fa-li {
+  position: absolute;
+  left: -2.1428571429em;
+  width: 2.1428571429em;
+  top: 0.1428571429em;
+  text-align: center;
+}
+/* line 16, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_list.scss */
+.fa-li.fa-lg {
+  left: -1.8571428571em;
+}
+
+/* line 4, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+}
+
+/* line 10, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa-pull-left {
+  float: left;
+}
+
+/* line 11, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa-pull-right {
+  float: right;
+}
+
+/* line 14, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+/* line 15, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+
+/* Deprecated as of 4.4.0 */
+/* line 19, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 20, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 23, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa.pull-left {
+  margin-right: .3em;
+}
+/* line 24, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa.pull-right {
+  margin-left: .3em;
+}
+
+/* line 4, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_animated.scss */
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+
+/* line 9, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_animated.scss */
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+/* line 4, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* line 5, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 6, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+/* line 8, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+/* line 9, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+/* line 14, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  filter: none;
+}
+
+/* line 4, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+/* line 12, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 18, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack-1x {
+  line-height: inherit;
+}
+
+/* line 19, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+/* line 20, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-inverse {
+  color: #fff;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+/* line 4, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-glass:before {
+  content: "";
+}
+
+/* line 5, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-music:before {
+  content: "";
+}
+
+/* line 6, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-search:before {
+  content: "";
+}
+
+/* line 7, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope-o:before {
+  content: "";
+}
+
+/* line 8, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-heart:before {
+  content: "";
+}
+
+/* line 9, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star:before {
+  content: "";
+}
+
+/* line 10, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star-o:before {
+  content: "";
+}
+
+/* line 11, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user:before {
+  content: "";
+}
+
+/* line 12, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-film:before {
+  content: "";
+}
+
+/* line 13, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-th-large:before {
+  content: "";
+}
+
+/* line 14, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-th:before {
+  content: "";
+}
+
+/* line 15, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-th-list:before {
+  content: "";
+}
+
+/* line 16, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check:before {
+  content: "";
+}
+
+/* line 17, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: "";
+}
+
+/* line 20, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-search-plus:before {
+  content: "";
+}
+
+/* line 21, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-search-minus:before {
+  content: "";
+}
+
+/* line 22, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-power-off:before {
+  content: "";
+}
+
+/* line 23, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-signal:before {
+  content: "";
+}
+
+/* line 24, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gear:before,
+.fa-cog:before {
+  content: "";
+}
+
+/* line 26, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trash-o:before {
+  content: "";
+}
+
+/* line 27, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-home:before {
+  content: "";
+}
+
+/* line 28, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-o:before {
+  content: "";
+}
+
+/* line 29, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-clock-o:before {
+  content: "";
+}
+
+/* line 30, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-road:before {
+  content: "";
+}
+
+/* line 31, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-download:before {
+  content: "";
+}
+
+/* line 32, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-down:before {
+  content: "";
+}
+
+/* line 33, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-up:before {
+  content: "";
+}
+
+/* line 34, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-inbox:before {
+  content: "";
+}
+
+/* line 35, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-play-circle-o:before {
+  content: "";
+}
+
+/* line 36, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rotate-right:before,
+.fa-repeat:before {
+  content: "";
+}
+
+/* line 38, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-refresh:before {
+  content: "";
+}
+
+/* line 39, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list-alt:before {
+  content: "";
+}
+
+/* line 40, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lock:before {
+  content: "";
+}
+
+/* line 41, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flag:before {
+  content: "";
+}
+
+/* line 42, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-headphones:before {
+  content: "";
+}
+
+/* line 43, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-off:before {
+  content: "";
+}
+
+/* line 44, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-down:before {
+  content: "";
+}
+
+/* line 45, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-up:before {
+  content: "";
+}
+
+/* line 46, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-qrcode:before {
+  content: "";
+}
+
+/* line 47, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-barcode:before {
+  content: "";
+}
+
+/* line 48, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tag:before {
+  content: "";
+}
+
+/* line 49, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tags:before {
+  content: "";
+}
+
+/* line 50, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-book:before {
+  content: "";
+}
+
+/* line 51, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bookmark:before {
+  content: "";
+}
+
+/* line 52, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-print:before {
+  content: "";
+}
+
+/* line 53, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-camera:before {
+  content: "";
+}
+
+/* line 54, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-font:before {
+  content: "";
+}
+
+/* line 55, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bold:before {
+  content: "";
+}
+
+/* line 56, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-italic:before {
+  content: "";
+}
+
+/* line 57, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-text-height:before {
+  content: "";
+}
+
+/* line 58, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-text-width:before {
+  content: "";
+}
+
+/* line 59, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-left:before {
+  content: "";
+}
+
+/* line 60, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-center:before {
+  content: "";
+}
+
+/* line 61, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-right:before {
+  content: "";
+}
+
+/* line 62, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-justify:before {
+  content: "";
+}
+
+/* line 63, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list:before {
+  content: "";
+}
+
+/* line 64, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dedent:before,
+.fa-outdent:before {
+  content: "";
+}
+
+/* line 66, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-indent:before {
+  content: "";
+}
+
+/* line 67, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-video-camera:before {
+  content: "";
+}
+
+/* line 68, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-photo:before,
+.fa-image:before,
+.fa-picture-o:before {
+  content: "";
+}
+
+/* line 71, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pencil:before {
+  content: "";
+}
+
+/* line 72, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-map-marker:before {
+  content: "";
+}
+
+/* line 73, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-adjust:before {
+  content: "";
+}
+
+/* line 74, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tint:before {
+  content: "";
+}
+
+/* line 75, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: "";
+}
+
+/* line 77, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-square-o:before {
+  content: "";
+}
+
+/* line 78, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-square-o:before {
+  content: "";
+}
+
+/* line 79, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows:before {
+  content: "";
+}
+
+/* line 80, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-step-backward:before {
+  content: "";
+}
+
+/* line 81, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fast-backward:before {
+  content: "";
+}
+
+/* line 82, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-backward:before {
+  content: "";
+}
+
+/* line 83, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-play:before {
+  content: "";
+}
+
+/* line 84, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pause:before {
+  content: "";
+}
+
+/* line 85, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stop:before {
+  content: "";
+}
+
+/* line 86, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-forward:before {
+  content: "";
+}
+
+/* line 87, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fast-forward:before {
+  content: "";
+}
+
+/* line 88, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-step-forward:before {
+  content: "";
+}
+
+/* line 89, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eject:before {
+  content: "";
+}
+
+/* line 90, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-left:before {
+  content: "";
+}
+
+/* line 91, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-right:before {
+  content: "";
+}
+
+/* line 92, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus-circle:before {
+  content: "";
+}
+
+/* line 93, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus-circle:before {
+  content: "";
+}
+
+/* line 94, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-times-circle:before {
+  content: "";
+}
+
+/* line 95, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-circle:before {
+  content: "";
+}
+
+/* line 96, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-question-circle:before {
+  content: "";
+}
+
+/* line 97, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-info-circle:before {
+  content: "";
+}
+
+/* line 98, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-crosshairs:before {
+  content: "";
+}
+
+/* line 99, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-times-circle-o:before {
+  content: "";
+}
+
+/* line 100, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-circle-o:before {
+  content: "";
+}
+
+/* line 101, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ban:before {
+  content: "";
+}
+
+/* line 102, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-left:before {
+  content: "";
+}
+
+/* line 103, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-right:before {
+  content: "";
+}
+
+/* line 104, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-up:before {
+  content: "";
+}
+
+/* line 105, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-down:before {
+  content: "";
+}
+
+/* line 106, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mail-forward:before,
+.fa-share:before {
+  content: "";
+}
+
+/* line 108, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-expand:before {
+  content: "";
+}
+
+/* line 109, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-compress:before {
+  content: "";
+}
+
+/* line 110, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus:before {
+  content: "";
+}
+
+/* line 111, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus:before {
+  content: "";
+}
+
+/* line 112, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-asterisk:before {
+  content: "";
+}
+
+/* line 113, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-exclamation-circle:before {
+  content: "";
+}
+
+/* line 114, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gift:before {
+  content: "";
+}
+
+/* line 115, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-leaf:before {
+  content: "";
+}
+
+/* line 116, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fire:before {
+  content: "";
+}
+
+/* line 117, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eye:before {
+  content: "";
+}
+
+/* line 118, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eye-slash:before {
+  content: "";
+}
+
+/* line 119, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: "";
+}
+
+/* line 121, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plane:before {
+  content: "";
+}
+
+/* line 122, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar:before {
+  content: "";
+}
+
+/* line 123, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-random:before {
+  content: "";
+}
+
+/* line 124, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comment:before {
+  content: "";
+}
+
+/* line 125, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-magnet:before {
+  content: "";
+}
+
+/* line 126, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-up:before {
+  content: "";
+}
+
+/* line 127, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-down:before {
+  content: "";
+}
+
+/* line 128, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-retweet:before {
+  content: "";
+}
+
+/* line 129, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shopping-cart:before {
+  content: "";
+}
+
+/* line 130, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder:before {
+  content: "";
+}
+
+/* line 131, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder-open:before {
+  content: "";
+}
+
+/* line 132, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows-v:before {
+  content: "";
+}
+
+/* line 133, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows-h:before {
+  content: "";
+}
+
+/* line 134, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bar-chart-o:before,
+.fa-bar-chart:before {
+  content: "";
+}
+
+/* line 136, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-twitter-square:before {
+  content: "";
+}
+
+/* line 137, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-facebook-square:before {
+  content: "";
+}
+
+/* line 138, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-camera-retro:before {
+  content: "";
+}
+
+/* line 139, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-key:before {
+  content: "";
+}
+
+/* line 140, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gears:before,
+.fa-cogs:before {
+  content: "";
+}
+
+/* line 142, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comments:before {
+  content: "";
+}
+
+/* line 143, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-o-up:before {
+  content: "";
+}
+
+/* line 144, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-o-down:before {
+  content: "";
+}
+
+/* line 145, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star-half:before {
+  content: "";
+}
+
+/* line 146, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-heart-o:before {
+  content: "";
+}
+
+/* line 147, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sign-out:before {
+  content: "";
+}
+
+/* line 148, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linkedin-square:before {
+  content: "";
+}
+
+/* line 149, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumb-tack:before {
+  content: "";
+}
+
+/* line 150, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-external-link:before {
+  content: "";
+}
+
+/* line 151, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sign-in:before {
+  content: "";
+}
+
+/* line 152, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trophy:before {
+  content: "";
+}
+
+/* line 153, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-github-square:before {
+  content: "";
+}
+
+/* line 154, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-upload:before {
+  content: "";
+}
+
+/* line 155, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lemon-o:before {
+  content: "";
+}
+
+/* line 156, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-phone:before {
+  content: "";
+}
+
+/* line 157, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-square-o:before {
+  content: "";
+}
+
+/* line 158, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bookmark-o:before {
+  content: "";
+}
+
+/* line 159, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-phone-square:before {
+  content: "";
+}
+
+/* line 160, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-twitter:before {
+  content: "";
+}
+
+/* line 161, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-facebook-f:before,
+.fa-facebook:before {
+  content: "";
+}
+
+/* line 163, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-github:before {
+  content: "";
+}
+
+/* line 164, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unlock:before {
+  content: "";
+}
+
+/* line 165, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-credit-card:before {
+  content: "";
+}
+
+/* line 166, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-feed:before,
+.fa-rss:before {
+  content: "";
+}
+
+/* line 168, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hdd-o:before {
+  content: "";
+}
+
+/* line 169, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bullhorn:before {
+  content: "";
+}
+
+/* line 170, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell:before {
+  content: "";
+}
+
+/* line 171, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-certificate:before {
+  content: "";
+}
+
+/* line 172, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-right:before {
+  content: "";
+}
+
+/* line 173, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-left:before {
+  content: "";
+}
+
+/* line 174, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-up:before {
+  content: "";
+}
+
+/* line 175, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-down:before {
+  content: "";
+}
+
+/* line 176, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-left:before {
+  content: "";
+}
+
+/* line 177, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-right:before {
+  content: "";
+}
+
+/* line 178, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-up:before {
+  content: "";
+}
+
+/* line 179, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-down:before {
+  content: "";
+}
+
+/* line 180, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-globe:before {
+  content: "";
+}
+
+/* line 181, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wrench:before {
+  content: "";
+}
+
+/* line 182, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tasks:before {
+  content: "";
+}
+
+/* line 183, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-filter:before {
+  content: "";
+}
+
+/* line 184, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-briefcase:before {
+  content: "";
+}
+
+/* line 185, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows-alt:before {
+  content: "";
+}
+
+/* line 186, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-group:before,
+.fa-users:before {
+  content: "";
+}
+
+/* line 188, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chain:before,
+.fa-link:before {
+  content: "";
+}
+
+/* line 190, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cloud:before {
+  content: "";
+}
+
+/* line 191, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flask:before {
+  content: "";
+}
+
+/* line 192, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cut:before,
+.fa-scissors:before {
+  content: "";
+}
+
+/* line 194, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-copy:before,
+.fa-files-o:before {
+  content: "";
+}
+
+/* line 196, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paperclip:before {
+  content: "";
+}
+
+/* line 197, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-save:before,
+.fa-floppy-o:before {
+  content: "";
+}
+
+/* line 199, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-square:before {
+  content: "";
+}
+
+/* line 200, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: "";
+}
+
+/* line 203, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list-ul:before {
+  content: "";
+}
+
+/* line 204, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list-ol:before {
+  content: "";
+}
+
+/* line 205, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-strikethrough:before {
+  content: "";
+}
+
+/* line 206, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-underline:before {
+  content: "";
+}
+
+/* line 207, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-table:before {
+  content: "";
+}
+
+/* line 208, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-magic:before {
+  content: "";
+}
+
+/* line 209, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-truck:before {
+  content: "";
+}
+
+/* line 210, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pinterest:before {
+  content: "";
+}
+
+/* line 211, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pinterest-square:before {
+  content: "";
+}
+
+/* line 212, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google-plus-square:before {
+  content: "";
+}
+
+/* line 213, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google-plus:before {
+  content: "";
+}
+
+/* line 214, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-money:before {
+  content: "";
+}
+
+/* line 215, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-down:before {
+  content: "";
+}
+
+/* line 216, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-up:before {
+  content: "";
+}
+
+/* line 217, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-left:before {
+  content: "";
+}
+
+/* line 218, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-right:before {
+  content: "";
+}
+
+/* line 219, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-columns:before {
+  content: "";
+}
+
+/* line 220, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unsorted:before,
+.fa-sort:before {
+  content: "";
+}
+
+/* line 222, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: "";
+}
+
+/* line 224, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: "";
+}
+
+/* line 226, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope:before {
+  content: "";
+}
+
+/* line 227, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linkedin:before {
+  content: "";
+}
+
+/* line 228, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: "";
+}
+
+/* line 230, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-legal:before,
+.fa-gavel:before {
+  content: "";
+}
+
+/* line 232, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "";
+}
+
+/* line 234, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comment-o:before {
+  content: "";
+}
+
+/* line 235, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comments-o:before {
+  content: "";
+}
+
+/* line 236, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flash:before,
+.fa-bolt:before {
+  content: "";
+}
+
+/* line 238, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sitemap:before {
+  content: "";
+}
+
+/* line 239, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-umbrella:before {
+  content: "";
+}
+
+/* line 240, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paste:before,
+.fa-clipboard:before {
+  content: "";
+}
+
+/* line 242, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lightbulb-o:before {
+  content: "";
+}
+
+/* line 243, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-exchange:before {
+  content: "";
+}
+
+/* line 244, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cloud-download:before {
+  content: "";
+}
+
+/* line 245, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cloud-upload:before {
+  content: "";
+}
+
+/* line 246, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-md:before {
+  content: "";
+}
+
+/* line 247, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stethoscope:before {
+  content: "";
+}
+
+/* line 248, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-suitcase:before {
+  content: "";
+}
+
+/* line 249, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell-o:before {
+  content: "";
+}
+
+/* line 250, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-coffee:before {
+  content: "";
+}
+
+/* line 251, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cutlery:before {
+  content: "";
+}
+
+/* line 252, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-text-o:before {
+  content: "";
+}
+
+/* line 253, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-building-o:before {
+  content: "";
+}
+
+/* line 254, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hospital-o:before {
+  content: "";
+}
+
+/* line 255, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ambulance:before {
+  content: "";
+}
+
+/* line 256, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-medkit:before {
+  content: "";
+}
+
+/* line 257, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fighter-jet:before {
+  content: "";
+}
+
+/* line 258, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-beer:before {
+  content: "";
+}
+
+/* line 259, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-h-square:before {
+  content: "";
+}
+
+/* line 260, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus-square:before {
+  content: "";
+}
+
+/* line 261, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-left:before {
+  content: "";
+}
+
+/* line 262, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-right:before {
+  content: "";
+}
+
+/* line 263, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-up:before {
+  content: "";
+}
+
+/* line 264, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-down:before {
+  content: "";
+}
+
+/* line 265, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-left:before {
+  content: "";
+}
+
+/* line 266, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-right:before {
+  content: "";
+}
+
+/* line 267, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-up:before {
+  content: "";
+}
+
+/* line 268, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-down:before {
+  content: "";
+}
+
+/* line 269, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-desktop:before {
+  content: "";
+}
+
+/* line 270, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-laptop:before {
+  content: "";
+}
+
+/* line 271, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tablet:before {
+  content: "";
+}
+
+/* line 272, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: "";
+}
+
+/* line 274, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle-o:before {
+  content: "";
+}
+
+/* line 275, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-quote-left:before {
+  content: "";
+}
+
+/* line 276, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-quote-right:before {
+  content: "";
+}
+
+/* line 277, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-spinner:before {
+  content: "";
+}
+
+/* line 278, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle:before {
+  content: "";
+}
+
+/* line 279, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: "";
+}
+
+/* line 281, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-github-alt:before {
+  content: "";
+}
+
+/* line 282, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder-o:before {
+  content: "";
+}
+
+/* line 283, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder-open-o:before {
+  content: "";
+}
+
+/* line 284, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-smile-o:before {
+  content: "";
+}
+
+/* line 285, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-frown-o:before {
+  content: "";
+}
+
+/* line 286, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-meh-o:before {
+  content: "";
+}
+
+/* line 287, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gamepad:before {
+  content: "";
+}
+
+/* line 288, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-keyboard-o:before {
+  content: "";
+}
+
+/* line 289, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flag-o:before {
+  content: "";
+}
+
+/* line 290, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flag-checkered:before {
+  content: "";
+}
+
+/* line 291, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-terminal:before {
+  content: "";
+}
+
+/* line 292, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-code:before {
+  content: "";
+}
+
+/* line 293, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mail-reply-all:before,
+.fa-reply-all:before {
+  content: "";
+}
+
+/* line 295, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: "";
+}
+
+/* line 298, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-location-arrow:before {
+  content: "";
+}
+
+/* line 299, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-crop:before {
+  content: "";
+}
+
+/* line 300, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-code-fork:before {
+  content: "";
+}
+
+/* line 301, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: "";
+}
+
+/* line 303, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-question:before {
+  content: "";
+}
+
+/* line 304, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-info:before {
+  content: "";
+}
+
+/* line 305, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-exclamation:before {
+  content: "";
+}
+
+/* line 306, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-superscript:before {
+  content: "";
+}
+
+/* line 307, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-subscript:before {
+  content: "";
+}
+
+/* line 308, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eraser:before {
+  content: "";
+}
+
+/* line 309, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-puzzle-piece:before {
+  content: "";
+}
+
+/* line 310, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-microphone:before {
+  content: "";
+}
+
+/* line 311, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-microphone-slash:before {
+  content: "";
+}
+
+/* line 312, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shield:before {
+  content: "";
+}
+
+/* line 313, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar-o:before {
+  content: "";
+}
+
+/* line 314, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fire-extinguisher:before {
+  content: "";
+}
+
+/* line 315, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rocket:before {
+  content: "";
+}
+
+/* line 316, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-maxcdn:before {
+  content: "";
+}
+
+/* line 317, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-left:before {
+  content: "";
+}
+
+/* line 318, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-right:before {
+  content: "";
+}
+
+/* line 319, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-up:before {
+  content: "";
+}
+
+/* line 320, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-down:before {
+  content: "";
+}
+
+/* line 321, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-html5:before {
+  content: "";
+}
+
+/* line 322, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-css3:before {
+  content: "";
+}
+
+/* line 323, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-anchor:before {
+  content: "";
+}
+
+/* line 324, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unlock-alt:before {
+  content: "";
+}
+
+/* line 325, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bullseye:before {
+  content: "";
+}
+
+/* line 326, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ellipsis-h:before {
+  content: "";
+}
+
+/* line 327, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ellipsis-v:before {
+  content: "";
+}
+
+/* line 328, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rss-square:before {
+  content: "";
+}
+
+/* line 329, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-play-circle:before {
+  content: "";
+}
+
+/* line 330, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ticket:before {
+  content: "";
+}
+
+/* line 331, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus-square:before {
+  content: "";
+}
+
+/* line 332, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus-square-o:before {
+  content: "";
+}
+
+/* line 333, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-level-up:before {
+  content: "";
+}
+
+/* line 334, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-level-down:before {
+  content: "";
+}
+
+/* line 335, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-square:before {
+  content: "";
+}
+
+/* line 336, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pencil-square:before {
+  content: "";
+}
+
+/* line 337, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-external-link-square:before {
+  content: "";
+}
+
+/* line 338, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-square:before {
+  content: "";
+}
+
+/* line 339, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-compass:before {
+  content: "";
+}
+
+/* line 340, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: "";
+}
+
+/* line 342, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: "";
+}
+
+/* line 344, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: "";
+}
+
+/* line 346, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-euro:before,
+.fa-eur:before {
+  content: "";
+}
+
+/* line 348, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gbp:before {
+  content: "";
+}
+
+/* line 349, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dollar:before,
+.fa-usd:before {
+  content: "";
+}
+
+/* line 351, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rupee:before,
+.fa-inr:before {
+  content: "";
+}
+
+/* line 353, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
+  content: "";
+}
+
+/* line 357, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: "";
+}
+
+/* line 360, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-won:before,
+.fa-krw:before {
+  content: "";
+}
+
+/* line 362, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: "";
+}
+
+/* line 364, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file:before {
+  content: "";
+}
+
+/* line 365, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-text:before {
+  content: "";
+}
+
+/* line 366, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-alpha-asc:before {
+  content: "";
+}
+
+/* line 367, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-alpha-desc:before {
+  content: "";
+}
+
+/* line 368, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-amount-asc:before {
+  content: "";
+}
+
+/* line 369, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-amount-desc:before {
+  content: "";
+}
+
+/* line 370, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-numeric-asc:before {
+  content: "";
+}
+
+/* line 371, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-numeric-desc:before {
+  content: "";
+}
+
+/* line 372, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-up:before {
+  content: "";
+}
+
+/* line 373, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-down:before {
+  content: "";
+}
+
+/* line 374, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-youtube-square:before {
+  content: "";
+}
+
+/* line 375, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-youtube:before {
+  content: "";
+}
+
+/* line 376, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-xing:before {
+  content: "";
+}
+
+/* line 377, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-xing-square:before {
+  content: "";
+}
+
+/* line 378, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-youtube-play:before {
+  content: "";
+}
+
+/* line 379, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dropbox:before {
+  content: "";
+}
+
+/* line 380, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stack-overflow:before {
+  content: "";
+}
+
+/* line 381, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-instagram:before {
+  content: "";
+}
+
+/* line 382, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flickr:before {
+  content: "";
+}
+
+/* line 383, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-adn:before {
+  content: "";
+}
+
+/* line 384, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bitbucket:before {
+  content: "";
+}
+
+/* line 385, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bitbucket-square:before {
+  content: "";
+}
+
+/* line 386, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tumblr:before {
+  content: "";
+}
+
+/* line 387, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tumblr-square:before {
+  content: "";
+}
+
+/* line 388, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-down:before {
+  content: "";
+}
+
+/* line 389, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-up:before {
+  content: "";
+}
+
+/* line 390, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-left:before {
+  content: "";
+}
+
+/* line 391, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-right:before {
+  content: "";
+}
+
+/* line 392, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-apple:before {
+  content: "";
+}
+
+/* line 393, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-windows:before {
+  content: "";
+}
+
+/* line 394, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-android:before {
+  content: "";
+}
+
+/* line 395, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linux:before {
+  content: "";
+}
+
+/* line 396, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dribbble:before {
+  content: "";
+}
+
+/* line 397, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-skype:before {
+  content: "";
+}
+
+/* line 398, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-foursquare:before {
+  content: "";
+}
+
+/* line 399, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trello:before {
+  content: "";
+}
+
+/* line 400, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-female:before {
+  content: "";
+}
+
+/* line 401, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-male:before {
+  content: "";
+}
+
+/* line 402, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gittip:before,
+.fa-gratipay:before {
+  content: "";
+}
+
+/* line 404, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sun-o:before {
+  content: "";
+}
+
+/* line 405, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-moon-o:before {
+  content: "";
+}
+
+/* line 406, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-archive:before {
+  content: "";
+}
+
+/* line 407, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bug:before {
+  content: "";
+}
+
+/* line 408, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vk:before {
+  content: "";
+}
+
+/* line 409, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-weibo:before {
+  content: "";
+}
+
+/* line 410, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-renren:before {
+  content: "";
+}
+
+/* line 411, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pagelines:before {
+  content: "";
+}
+
+/* line 412, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stack-exchange:before {
+  content: "";
+}
+
+/* line 413, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-right:before {
+  content: "";
+}
+
+/* line 414, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-left:before {
+  content: "";
+}
+
+/* line 415, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: "";
+}
+
+/* line 417, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dot-circle-o:before {
+  content: "";
+}
+
+/* line 418, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wheelchair:before {
+  content: "";
+}
+
+/* line 419, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vimeo-square:before {
+  content: "";
+}
+
+/* line 420, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: "";
+}
+
+/* line 422, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus-square-o:before {
+  content: "";
+}
+
+/* line 423, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-space-shuttle:before {
+  content: "";
+}
+
+/* line 424, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-slack:before {
+  content: "";
+}
+
+/* line 425, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope-square:before {
+  content: "";
+}
+
+/* line 426, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wordpress:before {
+  content: "";
+}
+
+/* line 427, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-openid:before {
+  content: "";
+}
+
+/* line 428, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-institution:before,
+.fa-bank:before,
+.fa-university:before {
+  content: "";
+}
+
+/* line 431, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mortar-board:before,
+.fa-graduation-cap:before {
+  content: "";
+}
+
+/* line 433, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-yahoo:before {
+  content: "";
+}
+
+/* line 434, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google:before {
+  content: "";
+}
+
+/* line 435, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-reddit:before {
+  content: "";
+}
+
+/* line 436, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-reddit-square:before {
+  content: "";
+}
+
+/* line 437, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stumbleupon-circle:before {
+  content: "";
+}
+
+/* line 438, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stumbleupon:before {
+  content: "";
+}
+
+/* line 439, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-delicious:before {
+  content: "";
+}
+
+/* line 440, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-digg:before {
+  content: "";
+}
+
+/* line 441, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pied-piper-pp:before {
+  content: "";
+}
+
+/* line 442, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pied-piper-alt:before {
+  content: "";
+}
+
+/* line 443, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-drupal:before {
+  content: "";
+}
+
+/* line 444, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-joomla:before {
+  content: "";
+}
+
+/* line 445, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-language:before {
+  content: "";
+}
+
+/* line 446, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fax:before {
+  content: "";
+}
+
+/* line 447, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-building:before {
+  content: "";
+}
+
+/* line 448, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-child:before {
+  content: "";
+}
+
+/* line 449, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paw:before {
+  content: "";
+}
+
+/* line 450, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-spoon:before {
+  content: "";
+}
+
+/* line 451, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cube:before {
+  content: "";
+}
+
+/* line 452, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cubes:before {
+  content: "";
+}
+
+/* line 453, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-behance:before {
+  content: "";
+}
+
+/* line 454, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-behance-square:before {
+  content: "";
+}
+
+/* line 455, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-steam:before {
+  content: "";
+}
+
+/* line 456, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-steam-square:before {
+  content: "";
+}
+
+/* line 457, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-recycle:before {
+  content: "";
+}
+
+/* line 458, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-automobile:before,
+.fa-car:before {
+  content: "";
+}
+
+/* line 460, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cab:before,
+.fa-taxi:before {
+  content: "";
+}
+
+/* line 462, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tree:before {
+  content: "";
+}
+
+/* line 463, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-spotify:before {
+  content: "";
+}
+
+/* line 464, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-deviantart:before {
+  content: "";
+}
+
+/* line 465, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-soundcloud:before {
+  content: "";
+}
+
+/* line 466, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-database:before {
+  content: "";
+}
+
+/* line 467, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-pdf-o:before {
+  content: "";
+}
+
+/* line 468, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-word-o:before {
+  content: "";
+}
+
+/* line 469, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-excel-o:before {
+  content: "";
+}
+
+/* line 470, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-powerpoint-o:before {
+  content: "";
+}
+
+/* line 471, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-photo-o:before,
+.fa-file-picture-o:before,
+.fa-file-image-o:before {
+  content: "";
+}
+
+/* line 474, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-zip-o:before,
+.fa-file-archive-o:before {
+  content: "";
+}
+
+/* line 476, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-sound-o:before,
+.fa-file-audio-o:before {
+  content: "";
+}
+
+/* line 478, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-movie-o:before,
+.fa-file-video-o:before {
+  content: "";
+}
+
+/* line 480, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-code-o:before {
+  content: "";
+}
+
+/* line 481, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vine:before {
+  content: "";
+}
+
+/* line 482, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-codepen:before {
+  content: "";
+}
+
+/* line 483, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-jsfiddle:before {
+  content: "";
+}
+
+/* line 484, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-life-bouy:before,
+.fa-life-buoy:before,
+.fa-life-saver:before,
+.fa-support:before,
+.fa-life-ring:before {
+  content: "";
+}
+
+/* line 489, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle-o-notch:before {
+  content: "";
+}
+
+/* line 490, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ra:before,
+.fa-resistance:before,
+.fa-rebel:before {
+  content: "";
+}
+
+/* line 493, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ge:before,
+.fa-empire:before {
+  content: "";
+}
+
+/* line 495, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-git-square:before {
+  content: "";
+}
+
+/* line 496, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-git:before {
+  content: "";
+}
+
+/* line 497, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
+.fa-hacker-news:before {
+  content: "";
+}
+
+/* line 500, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tencent-weibo:before {
+  content: "";
+}
+
+/* line 501, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-qq:before {
+  content: "";
+}
+
+/* line 502, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wechat:before,
+.fa-weixin:before {
+  content: "";
+}
+
+/* line 504, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-send:before,
+.fa-paper-plane:before {
+  content: "";
+}
+
+/* line 506, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-send-o:before,
+.fa-paper-plane-o:before {
+  content: "";
+}
+
+/* line 508, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-history:before {
+  content: "";
+}
+
+/* line 509, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle-thin:before {
+  content: "";
+}
+
+/* line 510, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-header:before {
+  content: "";
+}
+
+/* line 511, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paragraph:before {
+  content: "";
+}
+
+/* line 512, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sliders:before {
+  content: "";
+}
+
+/* line 513, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-alt:before {
+  content: "";
+}
+
+/* line 514, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-alt-square:before {
+  content: "";
+}
+
+/* line 515, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bomb:before {
+  content: "";
+}
+
+/* line 516, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-soccer-ball-o:before,
+.fa-futbol-o:before {
+  content: "";
+}
+
+/* line 518, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tty:before {
+  content: "";
+}
+
+/* line 519, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-binoculars:before {
+  content: "";
+}
+
+/* line 520, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plug:before {
+  content: "";
+}
+
+/* line 521, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-slideshare:before {
+  content: "";
+}
+
+/* line 522, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-twitch:before {
+  content: "";
+}
+
+/* line 523, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-yelp:before {
+  content: "";
+}
+
+/* line 524, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-newspaper-o:before {
+  content: "";
+}
+
+/* line 525, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wifi:before {
+  content: "";
+}
+
+/* line 526, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calculator:before {
+  content: "";
+}
+
+/* line 527, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paypal:before {
+  content: "";
+}
+
+/* line 528, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google-wallet:before {
+  content: "";
+}
+
+/* line 529, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-visa:before {
+  content: "";
+}
+
+/* line 530, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-mastercard:before {
+  content: "";
+}
+
+/* line 531, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-discover:before {
+  content: "";
+}
+
+/* line 532, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-amex:before {
+  content: "";
+}
+
+/* line 533, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-paypal:before {
+  content: "";
+}
+
+/* line 534, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-stripe:before {
+  content: "";
+}
+
+/* line 535, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell-slash:before {
+  content: "";
+}
+
+/* line 536, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell-slash-o:before {
+  content: "";
+}
+
+/* line 537, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trash:before {
+  content: "";
+}
+
+/* line 538, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-copyright:before {
+  content: "";
+}
+
+/* line 539, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-at:before {
+  content: "";
+}
+
+/* line 540, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eyedropper:before {
+  content: "";
+}
+
+/* line 541, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paint-brush:before {
+  content: "";
+}
+
+/* line 542, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-birthday-cake:before {
+  content: "";
+}
+
+/* line 543, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-area-chart:before {
+  content: "";
+}
+
+/* line 544, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pie-chart:before {
+  content: "";
+}
+
+/* line 545, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-line-chart:before {
+  content: "";
+}
+
+/* line 546, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lastfm:before {
+  content: "";
+}
+
+/* line 547, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lastfm-square:before {
+  content: "";
+}
+
+/* line 548, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-off:before {
+  content: "";
+}
+
+/* line 549, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-on:before {
+  content: "";
+}
+
+/* line 550, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bicycle:before {
+  content: "";
+}
+
+/* line 551, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bus:before {
+  content: "";
+}
+
+/* line 552, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ioxhost:before {
+  content: "";
+}
+
+/* line 553, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angellist:before {
+  content: "";
+}
+
+/* line 554, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc:before {
+  content: "";
+}
+
+/* line 555, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shekel:before,
+.fa-sheqel:before,
+.fa-ils:before {
+  content: "";
+}
+
+/* line 558, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-meanpath:before {
+  content: "";
+}
+
+/* line 559, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-buysellads:before {
+  content: "";
+}
+
+/* line 560, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-connectdevelop:before {
+  content: "";
+}
+
+/* line 561, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dashcube:before {
+  content: "";
+}
+
+/* line 562, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-forumbee:before {
+  content: "";
+}
+
+/* line 563, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-leanpub:before {
+  content: "";
+}
+
+/* line 564, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sellsy:before {
+  content: "";
+}
+
+/* line 565, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shirtsinbulk:before {
+  content: "";
+}
+
+/* line 566, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-simplybuilt:before {
+  content: "";
+}
+
+/* line 567, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-skyatlas:before {
+  content: "";
+}
+
+/* line 568, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cart-plus:before {
+  content: "";
+}
+
+/* line 569, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cart-arrow-down:before {
+  content: "";
+}
+
+/* line 570, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-diamond:before {
+  content: "";
+}
+
+/* line 571, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ship:before {
+  content: "";
+}
+
+/* line 572, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-secret:before {
+  content: "";
+}
+
+/* line 573, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-motorcycle:before {
+  content: "";
+}
+
+/* line 574, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-street-view:before {
+  content: "";
+}
+
+/* line 575, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-heartbeat:before {
+  content: "";
+}
+
+/* line 576, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-venus:before {
+  content: "";
+}
+
+/* line 577, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars:before {
+  content: "";
+}
+
+/* line 578, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mercury:before {
+  content: "";
+}
+
+/* line 579, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "";
+}
+
+/* line 581, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-transgender-alt:before {
+  content: "";
+}
+
+/* line 582, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-venus-double:before {
+  content: "";
+}
+
+/* line 583, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars-double:before {
+  content: "";
+}
+
+/* line 584, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-venus-mars:before {
+  content: "";
+}
+
+/* line 585, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars-stroke:before {
+  content: "";
+}
+
+/* line 586, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars-stroke-v:before {
+  content: "";
+}
+
+/* line 587, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars-stroke-h:before {
+  content: "";
+}
+
+/* line 588, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-neuter:before {
+  content: "";
+}
+
+/* line 589, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-genderless:before {
+  content: "";
+}
+
+/* line 590, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-facebook-official:before {
+  content: "";
+}
+
+/* line 591, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pinterest-p:before {
+  content: "";
+}
+
+/* line 592, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-whatsapp:before {
+  content: "";
+}
+
+/* line 593, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-server:before {
+  content: "";
+}
+
+/* line 594, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-plus:before {
+  content: "";
+}
+
+/* line 595, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-times:before {
+  content: "";
+}
+
+/* line 596, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hotel:before,
+.fa-bed:before {
+  content: "";
+}
+
+/* line 598, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-viacoin:before {
+  content: "";
+}
+
+/* line 599, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-train:before {
+  content: "";
+}
+
+/* line 600, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-subway:before {
+  content: "";
+}
+
+/* line 601, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-medium:before {
+  content: "";
+}
+
+/* line 602, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "";
+}
+
+/* line 604, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-optin-monster:before {
+  content: "";
+}
+
+/* line 605, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-opencart:before {
+  content: "";
+}
+
+/* line 606, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-expeditedssl:before {
+  content: "";
+}
+
+/* line 607, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-battery-4:before,
+.fa-battery-full:before {
+  content: "";
+}
+
+/* line 609, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "";
+}
+
+/* line 611, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "";
+}
+
+/* line 613, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "";
+}
+
+/* line 615, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "";
+}
+
+/* line 617, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mouse-pointer:before {
+  content: "";
+}
+
+/* line 618, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-i-cursor:before {
+  content: "";
+}
+
+/* line 619, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-object-group:before {
+  content: "";
+}
+
+/* line 620, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-object-ungroup:before {
+  content: "";
+}
+
+/* line 621, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sticky-note:before {
+  content: "";
+}
+
+/* line 622, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sticky-note-o:before {
+  content: "";
+}
+
+/* line 623, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-jcb:before {
+  content: "";
+}
+
+/* line 624, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-diners-club:before {
+  content: "";
+}
+
+/* line 625, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-clone:before {
+  content: "";
+}
+
+/* line 626, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-balance-scale:before {
+  content: "";
+}
+
+/* line 627, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hourglass-o:before {
+  content: "";
+}
+
+/* line 628, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "";
+}
+
+/* line 630, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "";
+}
+
+/* line 632, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "";
+}
+
+/* line 634, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hourglass:before {
+  content: "";
+}
+
+/* line 635, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "";
+}
+
+/* line 637, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "";
+}
+
+/* line 639, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-scissors-o:before {
+  content: "";
+}
+
+/* line 640, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-lizard-o:before {
+  content: "";
+}
+
+/* line 641, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-spock-o:before {
+  content: "";
+}
+
+/* line 642, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-pointer-o:before {
+  content: "";
+}
+
+/* line 643, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-peace-o:before {
+  content: "";
+}
+
+/* line 644, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trademark:before {
+  content: "";
+}
+
+/* line 645, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-registered:before {
+  content: "";
+}
+
+/* line 646, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-creative-commons:before {
+  content: "";
+}
+
+/* line 647, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gg:before {
+  content: "";
+}
+
+/* line 648, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gg-circle:before {
+  content: "";
+}
+
+/* line 649, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tripadvisor:before {
+  content: "";
+}
+
+/* line 650, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-odnoklassniki:before {
+  content: "";
+}
+
+/* line 651, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-odnoklassniki-square:before {
+  content: "";
+}
+
+/* line 652, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-get-pocket:before {
+  content: "";
+}
+
+/* line 653, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wikipedia-w:before {
+  content: "";
+}
+
+/* line 654, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-safari:before {
+  content: "";
+}
+
+/* line 655, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chrome:before {
+  content: "";
+}
+
+/* line 656, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-firefox:before {
+  content: "";
+}
+
+/* line 657, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-opera:before {
+  content: "";
+}
+
+/* line 658, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-internet-explorer:before {
+  content: "";
+}
+
+/* line 659, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tv:before,
+.fa-television:before {
+  content: "";
+}
+
+/* line 661, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-contao:before {
+  content: "";
+}
+
+/* line 662, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-500px:before {
+  content: "";
+}
+
+/* line 663, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-amazon:before {
+  content: "";
+}
+
+/* line 664, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar-plus-o:before {
+  content: "";
+}
+
+/* line 665, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar-minus-o:before {
+  content: "";
+}
+
+/* line 666, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar-times-o:before {
+  content: "";
+}
+
+/* line 667, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar-check-o:before {
+  content: "";
+}
+
+/* line 668, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-industry:before {
+  content: "";
+}
+
+/* line 669, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-map-pin:before {
+  content: "";
+}
+
+/* line 670, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-map-signs:before {
+  content: "";
+}
+
+/* line 671, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-map-o:before {
+  content: "";
+}
+
+/* line 672, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-map:before {
+  content: "";
+}
+
+/* line 673, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-commenting:before {
+  content: "";
+}
+
+/* line 674, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-commenting-o:before {
+  content: "";
+}
+
+/* line 675, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-houzz:before {
+  content: "";
+}
+
+/* line 676, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vimeo:before {
+  content: "";
+}
+
+/* line 677, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-black-tie:before {
+  content: "";
+}
+
+/* line 678, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fonticons:before {
+  content: "";
+}
+
+/* line 679, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-reddit-alien:before {
+  content: "";
+}
+
+/* line 680, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-edge:before {
+  content: "";
+}
+
+/* line 681, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-credit-card-alt:before {
+  content: "";
+}
+
+/* line 682, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-codiepie:before {
+  content: "";
+}
+
+/* line 683, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-modx:before {
+  content: "";
+}
+
+/* line 684, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fort-awesome:before {
+  content: "";
+}
+
+/* line 685, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-usb:before {
+  content: "";
+}
+
+/* line 686, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-product-hunt:before {
+  content: "";
+}
+
+/* line 687, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mixcloud:before {
+  content: "";
+}
+
+/* line 688, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-scribd:before {
+  content: "";
+}
+
+/* line 689, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pause-circle:before {
+  content: "";
+}
+
+/* line 690, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pause-circle-o:before {
+  content: "";
+}
+
+/* line 691, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stop-circle:before {
+  content: "";
+}
+
+/* line 692, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stop-circle-o:before {
+  content: "";
+}
+
+/* line 693, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shopping-bag:before {
+  content: "";
+}
+
+/* line 694, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shopping-basket:before {
+  content: "";
+}
+
+/* line 695, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hashtag:before {
+  content: "";
+}
+
+/* line 696, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bluetooth:before {
+  content: "";
+}
+
+/* line 697, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bluetooth-b:before {
+  content: "";
+}
+
+/* line 698, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-percent:before {
+  content: "";
+}
+
+/* line 699, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gitlab:before {
+  content: "";
+}
+
+/* line 700, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wpbeginner:before {
+  content: "";
+}
+
+/* line 701, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wpforms:before {
+  content: "";
+}
+
+/* line 702, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envira:before {
+  content: "";
+}
+
+/* line 703, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-universal-access:before {
+  content: "";
+}
+
+/* line 704, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wheelchair-alt:before {
+  content: "";
+}
+
+/* line 705, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-question-circle-o:before {
+  content: "";
+}
+
+/* line 706, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-blind:before {
+  content: "";
+}
+
+/* line 707, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-audio-description:before {
+  content: "";
+}
+
+/* line 708, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-control-phone:before {
+  content: "";
+}
+
+/* line 709, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-braille:before {
+  content: "";
+}
+
+/* line 710, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-assistive-listening-systems:before {
+  content: "";
+}
+
+/* line 711, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "";
+}
+
+/* line 713, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "";
+}
+
+/* line 716, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-glide:before {
+  content: "";
+}
+
+/* line 717, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-glide-g:before {
+  content: "";
+}
+
+/* line 718, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "";
+}
+
+/* line 720, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-low-vision:before {
+  content: "";
+}
+
+/* line 721, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-viadeo:before {
+  content: "";
+}
+
+/* line 722, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-viadeo-square:before {
+  content: "";
+}
+
+/* line 723, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-snapchat:before {
+  content: "";
+}
+
+/* line 724, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-snapchat-ghost:before {
+  content: "";
+}
+
+/* line 725, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-snapchat-square:before {
+  content: "";
+}
+
+/* line 726, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pied-piper:before {
+  content: "";
+}
+
+/* line 727, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-first-order:before {
+  content: "";
+}
+
+/* line 728, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-yoast:before {
+  content: "";
+}
+
+/* line 729, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_icons.scss */
+.fa-themeisle:before {
+  content: "";
+}
+
+/* line 4, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_screen-reader.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* line 51, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.6.2/assets/stylesheets/font-awesome/_mixins.scss */
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+/* line 1, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_elements.scss */
+.label {
+  padding: .1em .4em .125em;
+  display: inline;
+  font-size: 70%;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+/* line 13, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_elements.scss */
+.label-primary {
+  color: #345995;
+  background: #9eb6dd;
+}
+
+/* line 18, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_elements.scss */
+.tag {
+  padding: .2em .8em .3em;
+  display: inline;
+  font-size: 80%;
+  font-weight: bold;
+  line-height: 2.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 3px;
+}
+
+/* line 30, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_elements.scss */
+.tag-default {
+  background-color: #fbf3d7;
+}
+/* line 32, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_elements.scss */
+.tag-default a {
+  color: #EAC435;
+}
+/* line 35, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_elements.scss */
+.tag-default a:hover {
+  color: #a88811;
+}
+
+/* line 19, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.alert {
+  margin-bottom: 0.75em;
+}
+
+/* line 23, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash-alert {
+  background-color: #fbf3d7;
+  color: #a88811;
+  display: block;
+  padding: 0.75em;
+}
+/* line 8, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash-alert a {
+  color: #62500a;
+  text-decoration: underline;
+}
+/* line 12, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash-alert a:focus, .flash-alert a:hover {
+  color: #060501;
+}
+
+/* line 27, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash-error {
+  background-color: #fda9a1;
+  color: #830d03;
+  display: block;
+  padding: 0.75em;
+}
+/* line 8, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash-error a {
+  color: #380601;
+  text-decoration: underline;
+}
+/* line 12, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash-error a:focus, .flash-error a:hover {
+  color: black;
+}
+
+/* line 31, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash-notice {
+  background-color: #9eb6dd;
+  color: #1a2c49;
+  display: block;
+  padding: 0.75em;
+}
+/* line 8, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash-notice a {
+  color: #060a11;
+  text-decoration: underline;
+}
+/* line 12, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash-notice a:focus, .flash-notice a:hover {
+  color: black;
+}
+
+/* line 35, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash-success {
+  background-color: #9ffeea;
+  color: #028368;
+  display: block;
+  padding: 0.75em;
+}
+/* line 8, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash-success a {
+  color: #01372c;
+  text-decoration: underline;
+}
+/* line 12, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash-success a:focus, .flash-success a:hover {
+  color: black;
+}
+
+/* line 39, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_errors.scss */
+.flash {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  font-weight: bold;
+  padding: 1em;
+  z-index: 9999999;
+}
+
+/* line 1, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_search_bar.scss */
+.search-bar {
+  margin-top: 15px;
+}
+
+/* line 5, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_search_bar.scss */
+.search-bar, .inline-input {
+  position: relative;
+}
+/* line 12, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_search_bar.scss */
+.search-bar input[type=search], .search-bar input[type=email], .inline-input input[type=search], .inline-input input[type=email] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-transition: border-color;
+  -moz-transition: border-color;
+  transition: border-color;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1em;
+  margin: 0;
+  padding: 0.5em 0.5em;
+  position: relative;
+  width: 100%;
+}
+/* line 24, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_search_bar.scss */
+.search-bar a, .inline-input a {
+  float: right;
+  text-transform: uppercase;
+  font-size: 75%;
+}
+/* line 30, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_search_bar.scss */
+.search-bar button[type=submit], .search-bar .inline-button, .inline-input button[type=submit], .inline-input .inline-button {
+  position: absolute;
+  top: 0em;
+  right: 0em;
+  bottom: 0em;
+  outline: none;
+  padding: 5px 10px;
+}
+
+/* line 37, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_search_bar.scss */
+#mc_embed_signup input.mce_inline_error {
+  border-color: #FB4D3D !important;
+}
+
+/* line 41, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/_search_bar.scss */
+#mc_embed_signup div.mce_inline_error {
+  margin-top: 1em !important;
+  padding: 0.75em !important;
+  background-color: #fda9a1 !important;
+  z-index: 1;
+  color: #830d03 !important;
+}
+
+/* line 1, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer {
+  background: #324f7e;
+  padding: 3em 0px;
+  width: 100%;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/cream_pixels.png"), -webkit-linear-gradient(-450deg, #324f7e, #324f7e), center no-repeat #324f7e scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/cream_pixels.png"), linear-gradient(180deg, #324f7e, #324f7e), center no-repeat #324f7e scroll;
+}
+/* line 19, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer .footer-logo {
+  margin-bottom: 2em;
+  text-align: center;
+}
+/* line 23, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer .footer-logo i {
+  font-size: 1.5em;
+  color: white;
+}
+/* line 29, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer .footer-links {
+  margin-bottom: 1.5em;
+}
+/* line 20, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/mixins/_clearfix.scss */
+.footer .footer-links::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+@media screen and (min-width: 40em) {
+  /* line 29, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+  .footer .footer-links {
+    margin-left: 0%;
+  }
+}
+/* line 38, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer ul {
+  margin-bottom: 1em;
+  padding: 0;
+}
+@media screen and (min-width: 40em) {
+  /* line 38, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+  .footer ul {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 33.3333333333%;
+  }
+  /* line 89, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_span-columns.scss */
+  .footer ul:last-child {
+    margin-right: 0;
+  }
+  /* line 78, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_omega.scss */
+  .footer ul:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 108, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_omega.scss */
+  .footer ul:nth-child(3n+1) {
+    clear: left;
+  }
+  /* line 20, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/mixins/_clearfix.scss */
+  .footer ul::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+/* line 49, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer li {
+  line-height: 1.5em;
+  padding-bottom: 5px;
+  list-style: none;
+  text-align: center;
+}
+@media screen and (min-width: 40em) {
+  /* line 49, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+  .footer li {
+    text-align: center;
+  }
+}
+/* line 60, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer li a {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+}
+/* line 64, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer li a:focus, .footer li a:hover {
+  color: white;
+}
+/* line 70, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer li h3 {
+  color: white;
+  font-size: 1em;
+  margin-bottom: 0.4em;
+}
+/* line 76, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer hr {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 auto 1.5em;
+  width: 12em;
+}
+/* line 82, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9em;
+  line-height: 1.5em;
+  margin: auto;
+  max-width: 35em;
+  text-align: center;
+}
+
+/* line 92, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.pre-footer-div {
+  height: 15px;
+  background: #03CEA4;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/cream_pixels.png"), -webkit-linear-gradient(-450deg, #03CEA4, #03CEA4), center no-repeat #03CEA4 scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/cream_pixels.png"), linear-gradient(180deg, #03CEA4, #03CEA4), center no-repeat #03CEA4 scroll;
+}
+
+/* line 102, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.post-footer-div {
+  height: 35px;
+  background: #345995;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/stacked_circles.png"), -webkit-linear-gradient(-450deg, #345995, #345995), center no-repeat #345995 scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/stacked_circles.png"), linear-gradient(180deg, #345995, #345995), center no-repeat #345995 scroll;
+  /* Background pattern from subtlepatterns.com */
+}
+
+/* line 114, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.second-footer-div {
+  height: 5px;
+  background: #FB4D3D;
+}
+
+/* line 119, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.third-footer-div {
+  height: 15px;
+  background: #EAC435;
+}
+
+/* line 124, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer-div {
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/pw_maze_white.png"), -webkit-linear-gradient(-450deg, #03d3a8, #029c7c), center no-repeat #03d3a8 scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/pw_maze_white.png"), linear-gradient(180deg, #03d3a8, #029c7c), center no-repeat #03d3a8 scroll;
+}
+
+/* line 135, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer-social-link {
+  padding: 0px 10px;
+}
+
+/* line 139, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer-email-sign-up {
+  padding: 15px;
+}
+/* line 142, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/footer.css.scss */
+.footer-email-sign-up h3 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+/* line 1, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation {
+  background-color: #333;
+  border-bottom: 3px solid white;
+  min-height: 60px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0.95;
+  position: fixed;
+}
+/* line 27, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation .navigation-wrapper {
+  max-width: 1096px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 9999;
+}
+/* line 20, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/mixins/_clearfix.scss */
+header.navigation .navigation-wrapper::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 20, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/mixins/_clearfix.scss */
+header.navigation .navigation-wrapper::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 36, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation .logo {
+  float: left;
+  max-height: 60px;
+  padding-left: 1em;
+  padding-right: 2em;
+}
+/* line 42, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation .logo img {
+  max-height: 60px;
+  padding: 0.8em 0;
+}
+/* line 50, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation .navigation-menu-button {
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  float: right;
+  line-height: 60px;
+  line-height: 34px;
+  margin: 0;
+  margin-bottom: 16px;
+  padding-right: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 50, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation .navigation-menu-button {
+    display: none;
+  }
+}
+/* line 66, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation .navigation-menu-button:focus, header.navigation .navigation-menu-button:hover {
+  color: #03CEA4;
+  background: none;
+}
+/* line 75, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation nav {
+  float: none;
+  z-index: 9999999;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 75, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation nav {
+    float: left;
+  }
+}
+/* line 85, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation ul.navigation-menu {
+  -webkit-transform-style: preserve-3d;
+  clear: both;
+  display: none;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0;
+  width: 100%;
+  z-index: 9999;
+}
+/* line 95, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation ul.navigation-menu.show {
+  display: block;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 85, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation ul.navigation-menu {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+}
+/* line 108, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation ul li.nav-link {
+  background: #333;
+  display: block;
+  line-height: 60px;
+  overflow: hidden;
+  padding-right: 0.8em;
+  text-align: right;
+  width: 100%;
+  z-index: 9999;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 108, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation ul li.nav-link {
+    background: transparent;
+    display: inline;
+    line-height: 60px;
+    text-decoration: none;
+    width: auto;
+  }
+}
+/* line 128, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation ul li.nav-link a {
+  color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  text-decoration: none;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 128, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation ul li.nav-link a {
+    padding-right: 1em;
+  }
+}
+/* line 137, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation ul li.nav-link a:focus, header.navigation ul li.nav-link a:hover {
+  color: #03CEA4;
+}
+/* line 144, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation .active-nav-item a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 3px;
+}
+/* line 151, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation li.more.nav-link {
+  padding-right: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 151, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation li.more.nav-link {
+    padding-right: 1em;
+  }
+}
+/* line 158, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation li.more.nav-link > ul > li:first-child a {
+  padding-top: 1em;
+}
+/* line 162, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation li.more.nav-link a {
+  margin-right: 1em;
+}
+/* line 166, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation li.more.nav-link > a {
+  padding-right: 0.6em;
+}
+/* line 170, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation li.more.nav-link > a:after {
+  position: absolute;
+  top: auto;
+  right: -0.4em;
+  bottom: auto;
+  left: auto;
+  content: '\25BE';
+  color: rgba(255, 255, 255, 0.7);
+}
+/* line 177, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation li.more {
+  overflow: visible;
+  padding-right: 0;
+}
+/* line 181, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation li.more a {
+  padding-right: 0.8em;
+}
+/* line 185, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation li.more > a {
+  padding-right: 1.6em;
+  position: relative;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 185, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation li.more > a {
+    margin-right: 1em;
+  }
+}
+/* line 193, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation li.more > a:after {
+  content: '›';
+  font-size: 1.2em;
+  position: absolute;
+  right: 0.5em;
+}
+/* line 201, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation li.more:focus > .submenu, header.navigation li.more:hover > .submenu {
+  display: block;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 177, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation li.more {
+    padding-right: 0.8em;
+    position: relative;
+  }
+}
+/* line 212, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation ul.submenu {
+  display: none;
+  padding-left: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 212, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation ul.submenu {
+    left: -1em;
+    position: absolute;
+    top: 1.5em;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 222, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation ul.submenu .submenu {
+    left: 11.8em;
+    top: 0;
+  }
+}
+/* line 229, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation ul.submenu li {
+  display: block;
+  padding-right: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 229, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation ul.submenu li {
+    line-height: 46.1538461538px;
+  }
+  /* line 236, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation ul.submenu li:first-child > a {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  /* line 241, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation ul.submenu li:last-child > a {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding-bottom: 0.7em;
+  }
+}
+/* line 248, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation ul.submenu li a {
+  background-color: #2b2b2b;
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 248, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation ul.submenu li a {
+    background-color: #333;
+    padding-left: 1em;
+    text-align: left;
+    width: 12em;
+  }
+}
+/* line 266, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation .navigation-tools {
+  background: #505050;
+  clear: both;
+  display: block;
+  height: 60px;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 266, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation .navigation-tools {
+    background: transparent;
+    clear: none;
+    float: right;
+  }
+}
+/* line 281, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation .search-bar {
+  width: 66%;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 281, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation .search-bar {
+    float: right;
+  }
+}
+/* line 293, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation .search-bar form input[type=search] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #404040;
+  border-radius: 6px;
+  border: 1px solid #262626;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9em;
+  font-style: italic;
+  margin: 0;
+  padding: 0.5em 0.8em;
+  width: 100%;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 293, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation .search-bar form input[type=search] {
+    width: 100%;
+  }
+}
+/* line 310, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation .search-bar form button[type=submit] {
+  background: #404040;
+  border: none;
+  bottom: 0.3em;
+  left: auto;
+  outline: none;
+  padding: 0 9px;
+  position: absolute;
+  right: 0.3em;
+  top: 0.3em;
+}
+/* line 321, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+header.navigation .search-bar form button[type=submit] i {
+  height: 12px;
+  opacity: 0.7;
+  padding: 1px;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 281, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation .search-bar {
+    display: inline-block;
+    position: relative;
+    width: 16em;
+  }
+  /* line 334, /Users/kabuhadal/development/sheba/app/assets/stylesheets/shared/nav_menu.css.scss */
+  header.navigation .search-bar input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+  }
+}
+
+/* line 1, /Users/kabuhadal/development/sheba/app/assets/stylesheets/comments.scss */
+.comment {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+  display: table;
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  width: 100%;
+}
+/* line 16, /Users/kabuhadal/development/sheba/app/assets/stylesheets/comments.scss */
+.comment .comment-image,
+.comment .comment-content {
+  display: table-cell;
+  vertical-align: top;
+}
+/* line 22, /Users/kabuhadal/development/sheba/app/assets/stylesheets/comments.scss */
+.comment .comment-image {
+  padding-right: 1.4em;
+}
+/* line 25, /Users/kabuhadal/development/sheba/app/assets/stylesheets/comments.scss */
+.comment .comment-image > i {
+  background: #EAC435;
+  color: white;
+  border-radius: 3px;
+  display: block;
+  font-size: 2.75em;
+  max-width: none;
+  padding: 0.35em;
+}
+/* line 36, /Users/kabuhadal/development/sheba/app/assets/stylesheets/comments.scss */
+.comment-reverse-order .comment .comment-image {
+  padding-right: 0;
+  padding-left: 10px;
+}
+/* line 42, /Users/kabuhadal/development/sheba/app/assets/stylesheets/comments.scss */
+.comment .comment-content {
+  width: 100%;
+}
+/* line 45, /Users/kabuhadal/development/sheba/app/assets/stylesheets/comments.scss */
+.comment .comment-content h1 {
+  font-size: 1em;
+  margin: 0 0 0.5em 0;
+}
+/* line 50, /Users/kabuhadal/development/sheba/app/assets/stylesheets/comments.scss */
+.comment .comment-content p {
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+}
+/* line 55, /Users/kabuhadal/development/sheba/app/assets/stylesheets/comments.scss */
+.comment .comment-content .reply-button {
+  font-size: 0.65em;
+  background: #9ffeea;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+/* line 64, /Users/kabuhadal/development/sheba/app/assets/stylesheets/comments.scss */
+.comment .comment-content span.comment-detail {
+  color: rgba(51, 51, 51, 0.5);
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+/* line 72, /Users/kabuhadal/development/sheba/app/assets/stylesheets/comments.scss */
+.child-comment {
+  margin-left: 82px;
+}
+
+/* line 76, /Users/kabuhadal/development/sheba/app/assets/stylesheets/comments.scss */
+.reply-form {
+  margin-top: 1em;
+}
+
+/* line 1, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.cards {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+}
+
+/* line 7, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.content-wrapper {
+  padding: 0 1em 1.5em 1em;
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 66.6666666667%;
+}
+/* line 89, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_span-columns.scss */
+.content-wrapper:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 960px) {
+  /* line 7, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+  .content-wrapper {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  /* line 89, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_span-columns.scss */
+  .content-wrapper:last-child {
+    margin-right: 0;
+  }
+}
+
+/* line 15, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.logo-wrapper {
+  padding: 0 1em 1.5em 1em;
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 33.3333333333%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 89, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_span-columns.scss */
+.logo-wrapper:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 960px) {
+  /* line 15, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+  .logo-wrapper {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  /* line 89, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_span-columns.scss */
+  .logo-wrapper:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  /* line 25, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+  .site-logo {
+    width: 20%;
+    float: left;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 25, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+  .site-logo {
+    width: 30%;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  /* line 37, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+  .filters {
+    width: 60%;
+    float: right;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 37, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+  .filters {
+    float: none;
+  }
+}
+/* line 47, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.filters .sidebar-email-sign-up {
+  margin-top: 15px;
+}
+
+/* line 52, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.primary-card {
+  -webkit-flex-basis: 28em;
+  -moz-flex-basis: 28em;
+  flex-basis: 28em;
+  -ms-flex-preferred-size: 28em;
+}
+/* line 55, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.primary-card .card-image {
+  max-height: 350px;
+}
+
+/* line 61, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.small-cards .card {
+  -webkit-flex-basis: 15em;
+  -moz-flex-basis: 15em;
+  flex-basis: 15em;
+  -ms-flex-preferred-size: 15em;
+}
+/* line 64, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.small-cards .card .card-image {
+  max-height: 185px;
+}
+
+/* line 70, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.card {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px #dddddd;
+  cursor: pointer;
+  margin: 0 1em 1.5em 1em;
+  position: relative;
+}
+/* line 89, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.card a {
+  color: #333;
+}
+/* line 91, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.card a:hover {
+  color: #333;
+}
+/* line 96, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.card .card-image {
+  overflow: hidden;
+  background-color: #EAC435;
+}
+/* line 100, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.card .card-image img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 100%;
+  opacity: 1;
+}
+/* line 109, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.card .card-header {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+  border-radius: 3px 3px 0 0;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding: 0.5em 0.75em;
+}
+/* line 119, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.card .card-copy {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  padding: 0.75em 0.75em;
+}
+/* line 124, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.card .card-copy p {
+  margin: 0 0 0.75em;
+}
+/* line 129, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.card:focus, .card:hover {
+  cursor: pointer;
+}
+/* line 133, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.card:focus img, .card:hover img {
+  opacity: 0.7;
+}
+/* line 138, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.card:active {
+  background-color: #f7f7f7;
+}
+/* line 141, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.card:active .card-header {
+  background-color: #f7f7f7;
+}
+
+/* line 147, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.stats-wrapper {
+  padding: 0.75em;
+}
+/* line 149, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.stats-wrapper .date {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+/* line 157, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.stats {
+  float: right;
+}
+/* line 161, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.stats ul {
+  padding: 0;
+}
+/* line 165, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.stats li {
+  display: inline;
+  float: left;
+  font-size: 1.2em;
+  line-height: 1.1em;
+  padding: 0 0.7em;
+}
+/* line 172, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.stats li:first-child {
+  padding-left: 0;
+}
+/* line 176, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.stats li:last-child {
+  border-right: 0;
+}
+/* line 181, /Users/kabuhadal/development/sheba/app/assets/stylesheets/cards.scss */
+.stats span {
+  color: #333;
+  display: block;
+  font-size: 0.7em;
+  font-weight: normal;
+}
+
+/* line 29, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.outer-container {
+  max-width: 1096px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/* line 20, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/mixins/_clearfix.scss */
+.outer-container::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+/* line 36, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.container {
+  max-width: 1096px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/mixins/_clearfix.scss */
+.container::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+/* line 40, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+body {
+  margin: 0;
+}
+
+/* line 46, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.texture {
+  height: 5em;
+  width: 100%;
+}
+/* line 52, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.texture .texture-normal {
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/stacked_circles.png"), -webkit-linear-gradient(-450deg, #eac53a, #d6ae16), center no-repeat #eac53a scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/stacked_circles.png"), linear-gradient(180deg, #eac53a, #d6ae16), center no-repeat #eac53a scroll;
+  float: left;
+  height: 5em;
+  width: 50%;
+}
+/* line 61, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.texture .texture-inverted {
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/stacked_circles.png"), -webkit-linear-gradient(-450deg, #eac53a, #d6ae16), center no-repeat #eac53a scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/stacked_circles.png"), linear-gradient(180deg, #eac53a, #d6ae16), center no-repeat #eac53a scroll;
+  float: left;
+  height: 5em;
+  width: 50%;
+}
+
+/* line 71, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.breathe {
+  margin-bottom: 1.5em;
+}
+
+/* line 75, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.hidden {
+  display: none;
+}
+
+/* line 79, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.social-buttons {
+  float: right;
+}
+
+/* line 83, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.facebook-wrapper {
+  margin-top: -7px;
+  padding-left: 52px;
+  float: right;
+}
+
+/* line 89, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.video-wrapper {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 47.9166666667%;
+  height: 20em;
+}
+/* line 89, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_span-columns.scss */
+.video-wrapper:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  /* line 89, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+  .video-wrapper {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 300%;
+    max-width: 300px;
+    height: 14em;
+  }
+  /* line 89, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_span-columns.scss */
+  .video-wrapper:last-child {
+    margin-right: 0;
+  }
+}
+
+/* line 99, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.video-container {
+  position: relative;
+  padding-bottom: 52.25%;
+  padding-top: 36px;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 105, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 115, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out;
+}
+
+/* line 129, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.thumbnail-wrapper {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 33.3333333333%;
+}
+/* line 89, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_span-columns.scss */
+.thumbnail-wrapper:last-child {
+  margin-right: 0;
+}
+
+/* line 133, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.thumbnail a > img, .thumbnail > img {
+  margin-right: auto;
+  margin-left: auto;
+  vertical-align: middle;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 142, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.thumbnail-title {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* line 148, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.well {
+  background: #eaeaea;
+  border-radius: 3px;
+  padding: 1em;
+}
+
+@media screen and (max-width: 960px) {
+  /* line 154, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+  .hidden-tablet {
+    display: none;
+  }
+}
+
+/* line 160, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.visible-tablet {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  /* line 160, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+  .visible-tablet {
+    display: block;
+  }
+}
+
+/* line 167, /Users/kabuhadal/development/sheba/app/assets/stylesheets/application.scss */
+.comments, .related-posts {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 100%;
+}
+/* line 89, /Users/kabuhadal/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/neat-1.9.1/app/assets/stylesheets/grid/_span-columns.scss */
+.comments:last-child, .related-posts:last-child {
+  margin-right: 0;
+}

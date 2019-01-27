@@ -15,8 +15,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'bourbon'
-gem 'neat'
+gem 'bourbon', '~> 4.2.7'
+gem 'neat', '~> 1.9.1'
 gem "paperclip", "~> 4.3"
 gem "exception_notification", "~> 4.0.1"
 gem 'responders', '~> 2.0'
