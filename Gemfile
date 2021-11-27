@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.3.1'
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.5'
 gem 'pg', '~> 0.21'
 gem 'mysql2'
 gem 'sass-rails', '~> 5.0'
@@ -17,7 +17,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bourbon', '~> 4.2.7'
 gem 'neat', '~> 1.9.1'
-gem "paperclip", "~> 4.3"
+gem "paperclip"
 gem "exception_notification", "~> 4.0.1"
 gem 'responders', '~> 2.0'
 gem 'font-awesome-sass', '~> 4.6.2'
